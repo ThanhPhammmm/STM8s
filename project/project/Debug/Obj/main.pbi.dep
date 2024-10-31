@@ -1,0 +1,42 @@
+main.pbi: \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\main.c \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\main.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc\stm8s.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_conf.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_adc1.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_awu.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_beep.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_clk.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_exti.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_flash.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_gpio.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_i2c.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_itc.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_iwdg.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_rst.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_spi.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_tim1.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_tim2.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_tim4.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_uart1.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc/stm8s_wwdg.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\..\library\inc\stm8s_it.h \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\uart.c \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\gpio.c \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\system.c \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\adc.c \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\spi.c \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\lcd16x2.c \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\i2c.c \
+  C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\project\MenuLCD.c \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stddef.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ycheck.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\LIB\dlstm8smn.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Product.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\xencoding_limits.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h
