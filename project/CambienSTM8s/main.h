@@ -1,0 +1,9 @@
+#include <stm8s.h>
+#include <stm8s_it.h>
+#include <stdio.h>
+#include <system.h>
+#include <i2c.h>
+#include <Convert.h>
+#include <lcd16x2.h>
+#include <uart.h>
+#include <tim.h>

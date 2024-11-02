@@ -18,7 +18,7 @@ Button_State Button_read(Button_name *Button){
   Button->timePress = 0;
   Button->isPress = 0;
   Button->timeDouble = 0;
-  while([Gpio_read_input_port_A(Button->BUTTON_pin) == PUSH){
+  while((Gpio_read_input_port_A(Button->BUTTON_pin) == PUSH)){
     Button->isPress = 1;
     Button->timePress++;
   }
