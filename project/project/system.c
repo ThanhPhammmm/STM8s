@@ -1,6 +1,4 @@
-#include <main.h>
-
-void Delay_ms(uint32_t ticks){
+void Delay_Ms(uint32_t ticks){
   TIM4->CR1 |= (1 << 0);
   TIM4->EGR |= (1 << 0);
   TIM4->PSCR |= (0x3 << 0);
@@ -16,7 +14,7 @@ void Delay_ms(uint32_t ticks){
   }
   TIM4->CR1 &= ~(1 << 0);  // Optionally disable Timer
 }
-void CLK_HSI_16Mhz_config(void) {
+void CLK_HSI_16Mhz_Config(void) {
     CLK->ICKR |= (1 << 0);   
     while (!(CLK->ICKR & (1 << 1))); 
     CLK->SWR = 0xE1;

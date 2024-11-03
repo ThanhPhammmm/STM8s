@@ -1,8 +1,6 @@
-#include <main.h>
-
 uint32_t F_CPU = 16000000L;
 uint32_t data_is_ready = 0;
-uint8_t received_data = 0;
+uint8_t received_data_using_uart = 0;
 
 void Uart1_Init(uint16_t Baudrate){
   UART1->CR1 &= (0 << 5);
@@ -21,18 +19,18 @@ void Uart1_Init(uint16_t Baudrate){
 
   UART1->CR3 &= (0x00 << 4);
 }
-void Uart1_transmit_char(uint8_t c){
+void Uart1_Transmit_Char(uint8_t c){
   while(!(UART1->SR & (1 << 7)));
   UART1->DR = c;
 }
-void Uart1_transmit_string(char *str){
+void Uart1_Transmit_String(char *str){
   uint8_t *c = (uint8_t *)str; 
   while(*c){
-    Uart1_transmit_char(*c);
+    Uart1_Transmit_Char(*c);
     c++;
   }
 }
-void Uart1_transmit_number(uint16_t number){
+void Uart1_Transmit_Number(uint16_t number){
   char buff[10];
   int length = 0;
   if(number == 0){
@@ -47,12 +45,12 @@ void Uart1_transmit_number(uint16_t number){
     UART1->DR = buff[i];
   }
 }
-uint8_t Uart1_receive(){
+uint8_t Uart1_Receive(){
   while(!(UART1->SR & (1 << 5)));
   return UART1->DR; 
 }
-uint8_t Uart1_interrupt_receive(){
+uint8_t Uart1_Interrupt_Receive(){
   while(!data_is_ready);
   data_is_ready = 0;
-  return received_data;
+  return received_data_using_uart;
 }
