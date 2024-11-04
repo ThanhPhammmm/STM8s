@@ -1,8 +1,6 @@
 //D7D6D5D4BLERwRs
 //xxxx10x1
 //MSB -> LSB
-#include <i2c.c>
-
 void LCD_SendCommand(uint8_t cmd) {
     uint8_t highNibble, lowNibble;
     

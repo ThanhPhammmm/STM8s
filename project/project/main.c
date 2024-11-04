@@ -1,11 +1,4 @@
 #include <main.h>
-#include <uart.c>
-#include <gpio.c>
-#include <system.c>
-#include <adc.c>
-#include <spi.c>
-#include <lcd16x2.c>
-#include <MenuLCD.c>
 
 extern Menu_t *menu;
 extern uint32_t select;

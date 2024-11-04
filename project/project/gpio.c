@@ -1,9 +1,3 @@
-#define HIGH    1
-#define LOW     0
-#define ON      1
-#define OFF     0
-#define PUSH    0
-#define RELEASE 1
 //void Gpio_Init(GPIO_TypeDef *GPIOx){
 //  GPIOx->DDR |= (1 << 5);
 //  GPIOx->CR2 |= (1 << 5); 

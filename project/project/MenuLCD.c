@@ -1,98 +1,5 @@
-#include <stddef.h>
-
-uint32_t select = 1;
-
-typedef struct Linker{
-  struct Linker *previousMenu;
-  
-  char List1[16];
-  struct Linker *MenuList1;
-  
-  char List2[16];
-  struct Linker *MenuList2;
-} Menu_t;
-Menu_t MainMenu;
-Menu_t SubMenu2;
-Menu_t SubMenu1;
-Menu_t SubMenu6 = {
-  &SubMenu2,
-  
-  " Example 13", 
-  NULL,
-  
-  " Example 14", 
-  NULL
-};
-Menu_t SubMenu5 = {
-  &SubMenu2,
-  
-  " Example 11", 
-  NULL,
-  
-  " Example 12", 
-  NULL
-};
-Menu_t SubMenu4 = {
-  &SubMenu1,
-  
-  " Example 9 ", 
-  NULL,
-  
-  " Example 10", 
-  NULL
-};
-Menu_t SubMenu3 = {
-  &SubMenu1,
-  
-  " Example 7 ", 
-  NULL,
-  
-  " Example 8 ", 
-  NULL
-};
-Menu_t SubMenu1 = {
-  &MainMenu,
-
-  " Example 3 ", 
-  &SubMenu3,
-  
-  " Example 4 ", 
-  &SubMenu4
-};
-Menu_t SubMenu2 = {
-  &MainMenu,
-  
-  " Example 5 ", 
-  &SubMenu5,
-  
-  " Example 6 ", 
-  &SubMenu6
-};
-Menu_t MainMenu = {
-  NULL,
-  
-  " Example 1 ", 
-  &SubMenu1,
-  
-  " Example 2 ", 
-  &SubMenu2
-};
-typedef struct
-{
-        uint8_t status;
-        uint8_t status_old;
-        uint8_t flag_press;
-        uint8_t flag_change;
-
-        unsigned int count_press;
-        unsigned int count_time_hold;
-        unsigned int time_out;
-        unsigned int status_result;
-        
-        unsigned int pin;
-} typein_t;
-
 Menu_t *menu = &MainMenu;
+
 void Menu_Display(Menu_t *menu, uint32_t select){
   LCD_Set_Cursor(1, 4);  // Move cursor to first line
   LCD_SendString(menu->List1);
@@ -116,18 +23,18 @@ void Button_ReadInput(uint8_t input, typein_t *datain)
     {
       datain->flag_press = 1;
     }
-    else
-    {
+    else if(datain->count_time_hold > 6000){
+      datain->status_result = 10;
+      datain->flag_change = 1;
       datain->flag_press = 0;
       datain->count_press = 0;
     }
-
     datain->time_out = 0;
     datain->count_time_hold++;
   }
   else if (datain->status == 1)
   {
-    if (datain->time_out >= 2500)
+    if (datain->time_out >= 2200)
     {
       if (datain->flag_press)
       {
@@ -194,5 +101,17 @@ void Button_Run(typein_t *button_check)
         button_check->status_result = 0;
         button_check->flag_change = 0;
     }
+  }
+  else if(button_check->status_result == 10){
+    while(menu->previousMenu != NULL){
+      menu = menu->previousMenu;
+      select = 1;
+      Menu_Display(menu, select);
+      for(int i = 0;i < 1000;i++){
+        for(int j = 0;j < 1000;j++);
+      }
+    }
+    button_check->status_result = 0;
+    button_check->flag_change = 0;
   }
 }
