@@ -68,11 +68,39 @@ void Button_Run(typein_t *button_check)
     if (button_check->flag_change == 1) // co bat khi khac trang thai truoc do
     {
       if(button_check->pin == 3){//up
-        select = (select == 1) ? 2 : select - 1; 
+//        select = (select == 1) ? 2 : select - 1; 
+//        Menu_Display(menu, select);
+        if(select == 1){
+          if(menu->MenuList1 != NULL){
+            menu = menu->MenuList1;
+            select = 2;
+          }
+          else{
+            menu = menu;
+            select = 1;
+          }
+        }
+        else{
+          select = select - 1;
+        }
         Menu_Display(menu, select);
       }
       else if(button_check->pin == 2){//down
-        select = (select == 2) ? 1 : select + 1; 
+//        select = (select == 2) ? 1 : select + 1; 
+//        Menu_Display(menu, select);
+        if(select == 2){
+          if(menu->MenuList2 != NULL){
+            menu = menu->MenuList2;
+            select = 1;
+          }
+          else{
+            menu = menu;
+            select = 2;
+          }
+        }
+        else{
+          select = select + 1;
+        }
         Menu_Display(menu, select);
       }
       else if(button_check->pin == 1){

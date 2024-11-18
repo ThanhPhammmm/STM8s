@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.11.1.207 for STM8                     02/Nov/2024  12:59:33
+# IAR ELF Linker V3.11.1.207 for STM8                     18/Nov/2024  16:47:01
 # Copyright 2010-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\CambienSTM8s\Debug\List\CambienSTM8s.map
 #    Command line =  
-#        -f C:\Users\THANHP~1\AppData\Local\Temp\EWA196.tmp
+#        -f C:\Users\THANHP~1\AppData\Local\Temp\EWE088.tmp
 #        (C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\CambienSTM8s\Debug\Obj\main.o
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --no_out_extension -o
@@ -78,7 +78,6 @@ No sections matched the following patterns:
   ro section .iar.init_table         in "P3-P5"
   ro section .init_array             in "P3-P5"
   ro section .near.data_init         in "P3-P5"
-  ro section .near.rodata            in "P3-P5"
   ro section .near_func.textrw_init  in "P3-P5"
   ro section .tiny.data_init         in "P3-P5"
   ro section .tiny.rodata_init       in "P3-P5"
@@ -128,24 +127,27 @@ No sections matched the following patterns:
     .intvec        const    0x008000   0x80  interrupt.o [4]
                           - 0x008080   0x80
 
-"P3-P5":                              0x105
-  .near_func.text  ro code  0x008080   0x56  main.o [1]
-  .iar.init_table  const    0x0080d6    0x8  - Linker created -
-  .near_func.text  ro code  0x0080de   0x1e  init_small.o [4]
-  .near_func.text  ro code  0x0080fc   0x18  vreg_util.o [4]
-  .near_func.text  ro code  0x008114   0x14  init.o [4]
-  .near_func.text  ro code  0x008128   0x14  __dbg_xxexit.o [3]
-  .near_func.text  ro code  0x00813c   0x13  cstartup.o [4]
-  .near_func.text  ro code  0x00814f   0x12  main.o [1]
-  .near_func.text  ro code  0x008161    0xc  main.o [1]
-  .near_func.text  ro code  0x00816d    0x6  main.o [1]
-  .near_func.text  ro code  0x008173    0x5  cexit.o [4]
-  .near_func.text  ro code  0x008178    0x3  interrupt.o [4]
-  .near_func.text  ro code  0x00817b    0x3  low_level_init.o [4]
-  .near_func.text  ro code  0x00817e    0x3  exit.o [4]
-  .near_func.text  ro code  0x008181    0x3  unhandled_exception.o [4]
-  .near_func.text  ro code  0x008184    0x1  __dbg_break.o [3]
-                          - 0x008185  0x105
+"P3-P5":                              0x199
+  .near_func.text  ro code  0x008080   0x62  main.o [1]
+  .near_func.text  ro code  0x0080e2   0x43  main.o [1]
+  .near_func.text  ro code  0x008125   0x24  main.o [1]
+  .iar.init_table  const    0x008149    0x8  - Linker created -
+  .near_func.text  ro code  0x008151   0x1e  short.o [4]
+  .near_func.text  ro code  0x00816f   0x1e  init_small.o [4]
+  .near_func.text  ro code  0x00818d   0x18  vreg_util.o [4]
+  .near_func.text  ro code  0x0081a5   0x14  init.o [4]
+  .near_func.text  ro code  0x0081b9   0x14  __dbg_xxexit.o [3]
+  .near_func.text  ro code  0x0081cd   0x13  cstartup.o [4]
+  .near_func.text  ro code  0x0081e0   0x12  main.o [1]
+  .near_func.text  ro code  0x0081f2    0xd  move.o [4]
+  .near.rodata     const    0x0081ff    0x8  main.o [1]
+  .near_func.text  ro code  0x008207    0x5  cexit.o [4]
+  .near_func.text  ro code  0x00820c    0x3  interrupt.o [4]
+  .near_func.text  ro code  0x00820f    0x3  low_level_init.o [4]
+  .near_func.text  ro code  0x008212    0x3  exit.o [4]
+  .near_func.text  ro code  0x008215    0x3  unhandled_exception.o [4]
+  .near_func.text  ro code  0x008218    0x1  __dbg_break.o [3]
+                          - 0x008219  0x199
 
 
 *******************************************************************************
@@ -167,9 +169,9 @@ Zero (__iar_zero_init2)
     Module                 ro code  ro data  rw data
     ------                 -------  -------  -------
 C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\CambienSTM8s\Debug\Obj: [1]
-    main.o                     122               105
+    main.o                     219        8      105
     ------------------------------------------------
-    Total:                     122               105
+    Total:                     219        8      105
 
 command line: [2]
     ------------------------------------------------
@@ -189,15 +191,17 @@ dlstm8smn.a: [4]
     init_small.o                30
     interrupt.o                  3      128
     low_level_init.o             3
+    move.o                      13
+    short.o                     30
     unhandled_exception.o        3
     vreg_util.o                 24
     vregs.o                                       12
     ------------------------------------------------
-    Total:                     110      128       12
+    Total:                     153      128       12
 
     Linker created                        8      256
 ----------------------------------------------------
-    Grand Total:               253      136      373
+    Grand Total:               393      144      373
 
 
 *******************************************************************************
@@ -206,8 +210,8 @@ dlstm8smn.a: [4]
 
 Entry                    Address  Size  Type      Object
 -----                    -------  ----  ----      ------
-.iar.init_table$$Base   0x0080d6         --   Gb  - Linker created -
-.iar.init_table$$Limit  0x0080de         --   Gb  - Linker created -
+.iar.init_table$$Base   0x008149         --   Gb  - Linker created -
+.iar.init_table$$Limit  0x008151         --   Gb  - Linker created -
 ?b0                     0x000000        Data  Gb  vregs.o [4]
 ?b1                     0x000001        Data  Gb  vregs.o [4]
 ?b10                    0x00000a        Data  Gb  vregs.o [4]
@@ -226,41 +230,45 @@ Entry                    Address  Size  Type      Object
 ?l0                     0x000000        Data  Gb  vregs.o [4]
 ?l1                     0x000004        Data  Gb  vregs.o [4]
 ?l2                     0x000008        Data  Gb  vregs.o [4]
-?push_w4                0x0080fc        Code  Gb  vreg_util.o [4]
+?move1616_v_x_y_a       0x0081f2        Code  Gb  move.o [4]
+?mul16_x_x_w0           0x008151        Code  Gb  short.o [4]
+?push_w4                0x00818d        Code  Gb  vreg_util.o [4]
 ?w0                     0x000000        Data  Gb  vregs.o [4]
 ?w1                     0x000002        Data  Gb  vregs.o [4]
 ?w2                     0x000004        Data  Gb  vregs.o [4]
 ?w3                     0x000006        Data  Gb  vregs.o [4]
 ?w4                     0x000008        Data  Gb  vregs.o [4]
 ?w5                     0x00000a        Data  Gb  vregs.o [4]
-CLK_HSI_16Mhz_config    0x00814f  0x12  Code  Gb  main.o [1]
+CLK_HSI_16Mhz_config    0x0081e0  0x12  Code  Gb  main.o [1]
 CSTACK$$Base            0x000300         --   Gb  - Linker created -
 CSTACK$$Limit           0x000400         --   Gb  - Linker created -
 Convert_bytes_into_uint16_t
-                        0x008161   0xc  Code  Gb  main.o [1]
+                        0x008080   0xc  Code  Gb  main.o [1]
 Convert_bytes_into_uint16_t::tmp
                         0x000070   0x2  Data  Lc  main.o [1]
+Flash_Write_Struct_Array
+                        0x0080e2  0x43  Code  Gb  main.o [1]
 INTVEC$$Base            0x008000         --   Gb  - Linker created -
 INTVEC$$Limit           0x008080         --   Gb  - Linker created -
-Region$$Table$$Base     0x0080d6         --   Gb  - Linker created -
-Region$$Table$$Limit    0x0080de         --   Gb  - Linker created -
-UART1_RX_IRQHandler     0x008080  0x56  Code  Gb  main.o [1]
-__DebugBreak            0x008184   0x1  Code  Gb  __dbg_break.o [3]
-__exit                  0x008128  0x14  Code  Gb  __dbg_xxexit.o [3]
-__iar_data_init2        0x008114  0x14  Code  Gb  init.o [4]
-__iar_program_start     0x00813c        Code  Gb  cstartup.o [4]
+Region$$Table$$Base     0x008149         --   Gb  - Linker created -
+Region$$Table$$Limit    0x008151         --   Gb  - Linker created -
+UART1_RX_IRQHandler     0x00808c  0x56  Code  Gb  main.o [1]
+__DebugBreak            0x008218   0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x0081b9  0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_data_init2        0x0081a5  0x14  Code  Gb  init.o [4]
+__iar_program_start     0x0081cd        Code  Gb  cstartup.o [4]
 __iar_unhandled_exception
-                        0x008181        Code  Gb  unhandled_exception.o [4]
-__iar_zero_init2        0x0080de        Code  Gb  init_small.o [4]
+                        0x008215        Code  Gb  unhandled_exception.o [4]
+__iar_zero_init2        0x00816f        Code  Gb  init_small.o [4]
 __intvec                0x008000        Data  Gb  interrupt.o [4]
-__low_level_init        0x00817b   0x3  Code  Gb  low_level_init.o [4]
-_exit                   0x008173        Code  Gb  cexit.o [4]
-_interrupt_20           0x008080        Code  Gb  main.o [1]
+__low_level_init        0x00820f   0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x008207        Code  Gb  cexit.o [4]
+_interrupt_20           0x00808c        Code  Gb  main.o [1]
 array_receive           0x00000c  0x64  Data  Gb  main.o [1]
 count_array_receive     0x000072   0x2  Data  Gb  main.o [1]
-exit                    0x00817e   0x3  Code  Gb  exit.o [4]
+exit                    0x008212   0x3  Code  Gb  exit.o [4]
 flag_array_receive      0x000074   0x1  Data  Gb  main.o [1]
-main                    0x00816d   0x6  Code  Gb  main.o [1]
+main                    0x008125  0x24  Code  Gb  main.o [1]
 
 
 [1] = C:\Users\ThanhPham25\OneDrive\Documents\STM8\project\CambienSTM8s\Debug\Obj
@@ -268,8 +276,8 @@ main                    0x00816d   0x6  Code  Gb  main.o [1]
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a
 
-  253 bytes of readonly  code memory
-  136 bytes of readonly  data memory
+  393 bytes of readonly  code memory
+  144 bytes of readonly  data memory
   373 bytes of readwrite data memory
 
 Errors: none

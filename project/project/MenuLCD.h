@@ -14,6 +14,7 @@ typedef struct Linker{
 Menu_t MainMenu;
 Menu_t SubMenu2;
 Menu_t SubMenu1;
+Menu_t SubMenu3;
 Menu_t SubMenu6 = {
   &SubMenu2,
   
@@ -36,7 +37,7 @@ Menu_t SubMenu4 = {
   &SubMenu1,
   
   " Example 9 ", 
-  NULL,
+  &SubMenu3,
   
   " Example 10", 
   NULL
@@ -45,37 +46,37 @@ Menu_t SubMenu3 = {
   &SubMenu1,
   
   " Example 7 ", 
-  NULL,
+  &SubMenu2,
   
   " Example 8 ", 
-  NULL
+  &SubMenu4
 };
 Menu_t SubMenu1 = {
   &MainMenu,
 
   " Example 3 ", 
-  &SubMenu3,
+  &MainMenu,
   
   " Example 4 ", 
-  &SubMenu4
+  &SubMenu2
 };
 Menu_t SubMenu2 = {
   &MainMenu,
   
   " Example 5 ", 
-  &SubMenu5,
+  &SubMenu1,
   
   " Example 6 ", 
-  &SubMenu6
+  &SubMenu3
 };
 Menu_t MainMenu = {
   NULL,
   
   " Example 1 ", 
-  &SubMenu1,
+  NULL,
   
   " Example 2 ", 
-  &SubMenu2
+  &SubMenu1
 };
 typedef struct
 {

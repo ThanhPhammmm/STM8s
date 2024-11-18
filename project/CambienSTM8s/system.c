@@ -15,8 +15,8 @@ void Delay_ms(uint32_t ticks){
   TIM4->CR1 &= ~(1 << 0);  // Optionally disable Timer
 }
 void CLK_HSI_16Mhz_config(void) {
-    CLK->ICKR |= (1 << 0);   
-    while (!(CLK->ICKR & (1 << 1))); 
+    CLK->ICKR |= (1 << 1);   
+    while (!(CLK->ICKR & (1 << 0))); 
     CLK->SWR = 0xE1;
     CLK->CKDIVR = 0x00;
 }

@@ -7,3 +7,8 @@
 #include <lcd16x2.h>
 #include <uart.h>
 #include <tim.h>
+#include <CreateFrame.h>
+#include <GetData.h>
+#include <Detect.h>
+#include <FSM.h>
+#include <Flash.h>
