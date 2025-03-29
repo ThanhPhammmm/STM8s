@@ -1,0 +1,593 @@
+###############################################################################
+#
+# IAR ELF Linker V3.11.1.207 for STM8                     27/Feb/2025  17:40:47
+# Copyright 2010-2019 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Exe\uart.out
+#    Map file     =  
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\List\uart.map
+#    Command line =  
+#        -f C:\Users\THANHP~1\AppData\Local\Temp\EW9C8C.tmp
+#        (D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Obj\atc.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Obj\atc_user.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Obj\main.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Obj\stm8s_uart1.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Obj\uart.o
+#        --redirect _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall
+#        --no_out_extension -o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Exe\uart.out
+#        --map
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\List\uart.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.3\stm8\config\lnkstm8s103f3.icf" --config_def _CSTACK_SIZE=0x100
+#        --config_def _HEAP_SIZE=0x100 --entry __iar_program_start --debug_lib)
+#
+###############################################################################
+
+*******************************************************************************
+*** MESSAGES
+***
+
+Error[Lp011]: section placement failed
+            unable to allocate space for sections/blocks with a total estimated
+                      minimum size of 0x69a bytes (max align 0x1) in
+                      <[0x000000-0x0003ff]> (total uncommitted space 0x2f0).
+            Uncommitted:
+            [0x000000-0x0000ff]:  0xf0
+            [0x000100-0x0003ff]: 0x200
+
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__Heap_Handler             = Basic
+__SystemLibrary            = DLib
+__code_model               = small
+__core                     = stm8
+__data_model               = medium
+__dlib_file_descriptor     = 1
+__dlib_full_locale_support = 1
+__rt_version               = 4
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
+"A1":  place at end of [0x000000-0x0003ff] { block CSTACK };
+"P2":  place in [from 0x000000 to 0x0003ff] {
+          block HEAP, rw section __DLIB_PERTHREAD, rw section .far.bss,
+          rw section .far.data, rw section .far.noinit,
+          rw section .far_func.textrw, rw section .huge.bss,
+          rw section .huge.data, rw section .huge.noinit,
+          rw section .huge_func.textrw, rw section .iar.dynexit,
+          rw section .near.bss, rw section .near.data, rw section .near.noinit,
+          rw section .near_func.textrw };
+"A2":  place at start of [0x008000-0x009fff] { block INTVEC };
+"P3":  place in [from 0x008000 to 0x009fff] {
+          ro section __DLIB_PERTHREAD_init, ro section .far.data_init,
+          ro section .far_func.textrw_init, ro section .huge.data_init,
+          ro section .huge_func.textrw_init, ro section .iar.init_table,
+          ro section .init_array, ro section .near.data_init,
+          ro section .near.rodata, ro section .near_func.text,
+          ro section .near_func.textrw_init, ro section .tiny.data_init,
+          ro section .tiny.rodata_init };
+"P4":  place in [from 0x008000 to 0x009fff] {
+          ro section .far.rodata, ro section .far_func.text };
+"P5":  place in [from 0x008000 to 0x009fff] {
+          ro section .huge.rodata, ro section .huge_func.text };
+do not initialize {
+   rw section .eeprom.noinit, rw section .far.noinit, rw section .huge.noinit,
+   rw section .near.noinit, rw section .tiny.noinit, rw section .vregs };
+initialize by copy {
+   rw section .far.bss, rw section .far.data, rw section .far_func.textrw,
+   rw section .huge.bss, rw section .huge.data, rw section .huge_func.textrw,
+   rw section .iar.dynexit, rw section .near.bss, rw section .near.data,
+   rw section .near_func.textrw, rw section .tiny.bss, rw section .tiny.data,
+   ro section .tiny.rodata };
+
+No sections matched the following patterns:
+
+  ro section .far.data_init          in "P3-P5"
+  ro section .far.rodata             in "P3-P5"
+  ro section .far_func.text          in "P3-P5"
+  ro section .far_func.textrw_init   in "P3-P5"
+  ro section .huge.data_init         in "P3-P5"
+  ro section .huge.rodata            in "P3-P5"
+  ro section .huge_func.text         in "P3-P5"
+  ro section .huge_func.textrw_init  in "P3-P5"
+  ro section .iar.init_table         in "P3-P5"
+  ro section .init_array             in "P3-P5"
+  ro section .near_func.textrw_init  in "P3-P5"
+  ro section .tiny.data_init         in "P3-P5"
+  ro section .tiny.rodata_init       in "P3-P5"
+  ro section __DLIB_PERTHREAD_init   in "P3-P5"
+  rw section .far.bss                in "P2"
+  rw section .far.data               in "P2"
+  rw section .far.noinit             in "P2"
+  rw section .far_func.textrw        in "P2"
+  rw section .huge.bss               in "P2"
+  rw section .huge.data              in "P2"
+  rw section .huge.noinit            in "P2"
+  rw section .huge_func.textrw       in "P2"
+  rw section .iar.dynexit            in "P2"
+  rw section .near.noinit            in "P2"
+  rw section .near_func.textrw       in "P2"
+  rw section .tiny.bss               in "P1"
+  rw section .tiny.data              in "P1"
+  rw section .tiny.noinit            in "P1"
+  rw section .tiny.rodata            in "P1"
+  rw section __DLIB_PERTHREAD        in "P2"
+  section .eeprom.data               in "P6-P8"
+  section .eeprom.noinit             in "P6-P8"
+  section .eeprom.rodata             in "P6-P8"
+
+
+  Section            Kind      Address    Size  Object
+  -------            ----      -------    ----  ------
+"A0":                                     0x10
+  .vregs             uninit   0x000000    0x10  vregs.o [4]
+                            - 0x000010    0x10
+
+"A1":                                    0x100
+  CSTACK                      0x000300   0x100  <Block>
+    CSTACK           uninit   0x000300   0x100  <Block tail>
+                            - 0x000400   0x100
+
+"A2":                                     0x80
+  INTVEC                      0x008000    0x80  <Block>
+    .intvec          const    0x008000    0x80  interrupt.o [4]
+                            - 0x008080    0x80
+
+"P3-P5":                                0x1718
+  .near_func.text    ro code  0x008080   0x445  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0084c5   0x1dc  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0086a1   0x18f  atc.o [1]
+  .near_func.text    ro code  0x008830   0x176  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0089a6   0x12f  vreg_util.o [4]
+  .near_func.text    ro code  0x008ad5   0x110  atc.o [1]
+  .near_func.text    ro code  0x008be5    0xd3  xxmemxfree.o [4]
+  Initializer bytes  const    0x008cb8    0xbe  <for P2-1> (used: 0x0)
+  .near_func.text    ro code  0x008d76    0xb0  long.o [4]
+  .near_func.text    ro code  0x008e26    0x9e  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x008ec4    0x92  xxmemxmalloc.o [4]
+  .near_func.text    ro code  0x008f56    0x69  atc_user.o [1]
+  .near_func.text    ro code  0x008fbf    0x63  xxmemxmalloc.o [4]
+  .near.rodata       const    0x009022    0x59  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x00907b    0x4e  uart.o [1]
+  .near_func.text    ro code  0x0090c9    0x41  uart.o [1]
+  .near_func.text    ro code  0x00910a    0x3e  snprintf.o [4]
+  .near_func.text    ro code  0x009148    0x3d  sprintf.o [4]
+  .near_func.text    ro code  0x009185    0x3d  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0091c2    0x3b  long_util.o [4]
+  .near_func.text    ro code  0x0091fd    0x39  atc_user.o [1]
+  .near_func.text    ro code  0x009236    0x36  xprintfsmall.o [4]
+  .near_func.text    ro code  0x00926c    0x35  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0092a1    0x32  xencoding_sb.o [4]
+  .near_func.text    ro code  0x0092d3    0x2f  atc_user.o [1]
+  .near_func.text    ro code  0x009302    0x2f  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009331    0x2e  strncat.o [4]
+  .near_func.text    ro code  0x00935f    0x2d  xsnprout.o [4]
+  .near_func.text    ro code  0x00938c    0x28  atc_user.o [1]
+  .near_func.text    ro code  0x0093b4    0x28  init_small.o [4]
+  .near_func.text    ro code  0x0093dc    0x24  strcat.o [4]
+  .near_func.text    ro code  0x009400    0x23  atc.o [1]
+  .near_func.text    ro code  0x009423    0x23  atc.o [1]
+  .near_func.text    ro code  0x009446    0x21  xmbtowc.o [4]
+  .near_func.text    ro code  0x009467    0x21  memchr.o [4]
+  .iar.init_table    const    0x009488     0xa  - Linker created -
+  .near_func.text    ro code  0x00949a    0x1f  memcpy.o [4]
+  .near_func.text    ro code  0x0094b9    0x1e  short.o [4]
+  .near_func.text    ro code  0x0094d7    0x1e  init_small.o [4]
+  .near_func.text    ro code  0x0094f5    0x1c  xwctomb.o [4]
+  .near_func.text    ro code  0x009511    0x19  atc_user.o [1]
+  .near_func.text    ro code  0x00952a    0x19  xgetmemchunk.o [4]
+  .near_func.text    ro code  0x009543    0x17  atc_user.o [1]
+  .near_func.text    ro code  0x00955a    0x17  xencoding_sb.o [4]
+  .near_func.text    ro code  0x009571    0x15  strchr.o [4]
+  .near_func.text    ro code  0x009586    0x14  atc_user.o [1]
+  .near_func.text    ro code  0x00959a    0x14  init.o [4]
+  .near_func.text    ro code  0x0095ae    0x14  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0095c2    0x14  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0095d6    0x14  __dbg_xxexit.o [3]
+  .near_func.text    ro code  0x0095ea    0x13  atc_user.o [1]
+  .near_func.text    ro code  0x0095fd    0x13  atc_user.o [1]
+  .near_func.text    ro code  0x009610    0x13  cstartup.o [4]
+  .near_func.text    ro code  0x009623    0x10  atc_user.o [1]
+  .near_func.text    ro code  0x009633    0x10  main.o [1]
+  .near_func.text    ro code  0x009643     0xe  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009651     0xd  move.o [4]
+  .near_func.text    ro code  0x00965e     0xd  strlen.o [4]
+  .near_func.text    ro code  0x00966b     0xc  setlocale.o [4]
+  .near.rodata       const    0x009677     0xb  atc_user.o [1]
+  .near_func.text    ro code  0x009682     0xb  xprintfsmall.o [4]
+  .near_func.text    ro code  0x00968d     0xb  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009698     0xb  xsprout.o [4]
+  .near_func.text    ro code  0x0096a3     0xa  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0096ad     0xa  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0096b7     0x9  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0096c0     0x9  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0096c9     0x9  xprintfsmall.o [4]
+  .near_func.text    ro code  0x0096d2     0x9  xprintfsmall.o [4]
+  .near.rodata       const    0x0096db     0x8  atc_user.o [1]
+  .near.rodata       const    0x0096e3     0x8  xprintfsmall.o [4]
+  .near.rodata       const    0x0096eb     0x8  xprintfsmall.o [4]
+  .near.rodata       const    0x0096f3     0x8  xencoding_sb.o [4]
+  .near.rodata       const    0x0096fb     0x8  xencoding_sb.o [4]
+  .near_func.text    ro code  0x009703     0x8  xprintfsmall.o [4]
+  .near.rodata       const    0x00970b     0x7  atc_user.o [1]
+  .near.rodata       const    0x009712     0x7  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009719     0x7  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009720     0x7  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009727     0x7  xprintfsmall.o [4]
+  .near_func.text    ro code  0x00972e     0x7  xxmemxmalloc.o [4]
+  .near.rodata       const    0x009735     0x6  atc_user.o [1]
+  .near.rodata       const    0x00973b     0x6  atc_user.o [1]
+  .near_func.text    ro code  0x009741     0x6  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009747     0x6  xprintfsmall.o [4]
+  .near_func.text    ro code  0x00974d     0x6  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009753     0x6  xmbcurmax.o [4]
+  .near.rodata       const    0x009759     0x5  atc_user.o [1]
+  .near.rodata       const    0x00975e     0x5  atc_user.o [1]
+  .near.rodata       const    0x009763     0x5  atc_user.o [1]
+  .near_func.text    ro code  0x009768     0x5  xprintfsmall.o [4]
+  .near_func.text    ro code  0x00976d     0x5  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009772     0x5  xprintfsmall.o [4]
+  .near_func.text    ro code  0x009777     0x5  cexit.o [4]
+  .near_func.text    ro code  0x00977c     0x4  setlocale.o [4]
+  .near.rodata       const    0x009780     0x3  atc_user.o [1]
+  .near_func.text    ro code  0x009783     0x3  atc_user.o [1]
+  .near_func.text    ro code  0x009786     0x3  interrupt.o [4]
+  .near_func.text    ro code  0x009789     0x3  low_level_init.o [4]
+  .near_func.text    ro code  0x00978c     0x3  exit.o [4]
+  .near_func.text    ro code  0x00978f     0x3  unhandled_exception.o [4]
+  .near.rodata       const    0x009792     0x2  atc_user.o [1]
+  .near.rodata       const    0x009794     0x2  atc_user.o [1]
+  .near_func.text    ro code  0x009796     0x1  main.o [1]
+  .near_func.text    ro code  0x009797     0x1  __dbg_break.o [3]
+                            - 0x009798  0x1718
+
+"P2", part 1 of 3 (*** FAILED ***):       0xbe
+  P2-1                                    0xbe  <Init block>
+    .near.data       inited               0x24  atc_user.o [1]
+    .near.data       inited                0xc  atc_user.o [1]
+    .near.data       inited               0x78  atc_user.o [1]
+    .near.data       inited                0x7  atc_user.o [1]
+    .near.data       inited                0x2  atc_user.o [1]
+    .near.data       inited                0x8  atc_user.o [1]
+    .near.data       inited                0x4  atc_user.o [1]
+    .near.data       inited                0x1  atc_user.o [1]
+                                          0xbe
+
+"P2", part 2 of 3 (*** FAILED ***):      0x4dc
+  .near.bss          zero                0x100  atc_user.o [1]
+  .near.bss          zero                 0xa2  atc_user.o [1]
+  .near.bss          zero                 0x80  atc_user.o [1]
+  .near.bss          zero                 0x80  atc_user.o [1]
+  .near.bss          zero                 0x80  atc_user.o [1]
+  .near.bss          zero                 0x80  atc_user.o [1]
+  .near.bss          zero                 0x80  atc_user.o [1]
+  .near.bss          zero                 0x80  atc_user.o [1]
+  .near.bss          zero                 0x14  uart.o [1]
+  .near.bss          zero                  0xe  setlocale.o [4]
+  .near.bss          zero                  0x4  xxmemxmalloc.o [4]
+  .near.bss          zero                  0x2  atc_user.o [1]
+  .near.bss          zero                  0x2  atc_user.o [1]
+  .near.bss          zero                  0x2  atc_user.o [1]
+  .near.bss          zero                  0x2  uart.o [1]
+  .near.bss          zero                  0x2  uart.o [1]
+  .near.bss          zero                  0x2  setlocale.o [4]
+  .near.bss          zero                  0x2  xgetmemchunk.o [4]
+  .near.bss          zero                  0x1  atc_user.o [1]
+  .near.bss          zero                  0x1  atc_user.o [1]
+  .near.bss          zero                  0x1  atc_user.o [1]
+  .near.bss          zero                  0x1  atc_user.o [1]
+  .near.bss          zero                  0x1  atc_user.o [1]
+  .near.bss          zero                  0x1  atc_user.o [1]
+                                         0x4dc
+
+"P2", part 3 of 3 (*** FAILED ***):      0x100
+  HEAP                                   0x100  <Block>
+    HEAP             uninit              0x100  <Block tail>
+                                         0x100
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init2)
+    1 source range, total size 0xbe:
+            0x008cb8  0xbe
+    1 destination range, total size 0xbe:
+          0x00000000  0xbe
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Obj: [1]
+    atc.o                      741
+    atc_user.o                 374      250    1 388
+    main.o                      17
+    stm8s_uart1.o              158       89
+    uart.o                     143                24
+    ------------------------------------------------
+    Total:                   1 433      339    1 412
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dbgstm8smd.a: [3]
+    __dbg_break.o                1
+    __dbg_xxexit.o              20
+    ------------------------------------------------
+    Total:                      21
+
+dlstm8smf.a: [4]
+    cexit.o                      5
+    cstartup.o                  19
+    exit.o                       3
+    init.o                      20
+    init_small.o                70
+    interrupt.o                  3      128
+    long.o                     176
+    long_util.o                 59
+    low_level_init.o             3
+    memchr.o                    33
+    memcpy.o                    31
+    move.o                      13
+    setlocale.o                 16                16
+    short.o                     30
+    snprintf.o                  62
+    sprintf.o                   61
+    strcat.o                    36
+    strchr.o                    21
+    strlen.o                    13
+    strncat.o                   46
+    unhandled_exception.o        3
+    vreg_util.o                303
+    vregs.o                                       16
+    xencoding_sb.o              73       16
+    xgetmemchunk.o              25                 2
+    xmbcurmax.o                  6
+    xmbtowc.o                   33
+    xprintfsmall.o           2 352       23
+    xsnprout.o                  45
+    xsprout.o                   11
+    xwctomb.o                   28
+    xxmemxfree.o               211
+    xxmemxmalloc.o             252                 4
+    ------------------------------------------------
+    Total:                   4 062      167       38
+
+    Linker created                       10      512
+----------------------------------------------------
+    Grand Total:             5 516      516    1 962
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base     0x009488          --   Gb  - Linker created -
+.iar.init_table$$Limit    0x00949a          --   Gb  - Linker created -
+?and32_l0_l0_0x           0x008df6         Code  Gb  long.o [4]
+?and32_l0_l0_l1           0x008df3         Code  Gb  long.o [4]
+?b0                       0x000000         Data  Gb  vregs.o [4]
+?b1                       0x000001         Data  Gb  vregs.o [4]
+?b10                      0x00000a         Data  Gb  vregs.o [4]
+?b11                      0x00000b         Data  Gb  vregs.o [4]
+?b12                      0x00000c         Data  Gb  vregs.o [4]
+?b13                      0x00000d         Data  Gb  vregs.o [4]
+?b14                      0x00000e         Data  Gb  vregs.o [4]
+?b15                      0x00000f         Data  Gb  vregs.o [4]
+?b2                       0x000002         Data  Gb  vregs.o [4]
+?b3                       0x000003         Data  Gb  vregs.o [4]
+?b4                       0x000004         Data  Gb  vregs.o [4]
+?b5                       0x000005         Data  Gb  vregs.o [4]
+?b6                       0x000006         Data  Gb  vregs.o [4]
+?b7                       0x000007         Data  Gb  vregs.o [4]
+?b8                       0x000008         Data  Gb  vregs.o [4]
+?b9                       0x000009         Data  Gb  vregs.o [4]
+?e0                       0x000001         Data  Gb  vregs.o [4]
+?e1                       0x000005         Data  Gb  vregs.o [4]
+?e2                       0x000009         Data  Gb  vregs.o [4]
+?e3                       0x00000d         Data  Gb  vregs.o [4]
+?epilogue_l2              0x008a4b         Code  Gb  vreg_util.o [4]
+?epilogue_l2_l3           0x008a48         Code  Gb  vreg_util.o [4]
+?epilogue_l2_w6           0x008a4f         Code  Gb  vreg_util.o [4]
+?epilogue_w4              0x008a56         Code  Gb  vreg_util.o [4]
+?l0                       0x000000         Data  Gb  vregs.o [4]
+?l1                       0x000004         Data  Gb  vregs.o [4]
+?l2                       0x000008         Data  Gb  vregs.o [4]
+?l3                       0x00000c         Data  Gb  vregs.o [4]
+?load32_0x_l0             0x0091ef         Code  Gb  long_util.o [4]
+?load32_asp_l0            0x0091e3         Code  Gb  long_util.o [4]
+?load32_dbsp_l0           0x0091de         Code  Gb  long_util.o [4]
+?load32_l0_0x             0x0091d2         Code  Gb  long_util.o [4]
+?load32_l0_asp            0x0091c7         Code  Gb  long_util.o [4]
+?load32_l0_dbsp           0x0091c2         Code  Gb  long_util.o [4]
+?load32_l0_xsp            0x0091c9         Code  Gb  long_util.o [4]
+?load32_xsp_l0            0x0091e5         Code  Gb  long_util.o [4]
+?mov_e0_e2                0x008aaa         Code  Gb  vreg_util.o [4]
+?mov_e1_e0                0x008ab7         Code  Gb  vreg_util.o [4]
+?mov_e2_e0                0x008ac4         Code  Gb  vreg_util.o [4]
+?mov_l0_l2                0x008aa7         Code  Gb  vreg_util.o [4]
+?mov_l1_l0                0x008ab4         Code  Gb  vreg_util.o [4]
+?mov_l2_l0                0x008ac1         Code  Gb  vreg_util.o [4]
+?mov_w0_w1                0x008a5a         Code  Gb  vreg_util.o [4]
+?mov_w0_w3                0x008a61         Code  Gb  vreg_util.o [4]
+?mov_w0_w4                0x008a68         Code  Gb  vreg_util.o [4]
+?mov_w0_w5                0x008a6f         Code  Gb  vreg_util.o [4]
+?mov_w1_w2                0x008a76         Code  Gb  vreg_util.o [4]
+?mov_w1_w4                0x008a7d         Code  Gb  vreg_util.o [4]
+?mov_w1_w5                0x008aad         Code  Gb  vreg_util.o [4]
+?mov_w2_w1                0x008a84         Code  Gb  vreg_util.o [4]
+?mov_w3_w1                0x008aba         Code  Gb  vreg_util.o [4]
+?mov_w4_w0                0x008a8b         Code  Gb  vreg_util.o [4]
+?mov_w4_w1                0x008a92         Code  Gb  vreg_util.o [4]
+?mov_w5_w0                0x008a99         Code  Gb  vreg_util.o [4]
+?mov_w5_w1                0x008ac7         Code  Gb  vreg_util.o [4]
+?mov_w6_w0                0x008aa0         Code  Gb  vreg_util.o [4]
+?mov_w7_w1                0x008ace         Code  Gb  vreg_util.o [4]
+?move1616_v_x_y_a         0x009651         Code  Gb  move.o [4]
+?mul16_x_x_w0             0x0094b9         Code  Gb  short.o [4]
+?neg32_l0_l0              0x008d76         Code  Gb  long.o [4]
+?pop_l0                   0x008a14         Code  Gb  vreg_util.o [4]
+?pop_l1                   0x008a1f         Code  Gb  vreg_util.o [4]
+?pop_l2                   0x008a2a         Code  Gb  vreg_util.o [4]
+?pop_l3                   0x008a35         Code  Gb  vreg_util.o [4]
+?pop_w4                   0x0089cd         Code  Gb  vreg_util.o [4]
+?pop_w6                   0x0089d4         Code  Gb  vreg_util.o [4]
+?push_l0                  0x0089e3         Code  Gb  vreg_util.o [4]
+?push_l1                  0x0089e8         Code  Gb  vreg_util.o [4]
+?push_l2                  0x0089ed         Code  Gb  vreg_util.o [4]
+?push_l3                  0x0089f2         Code  Gb  vreg_util.o [4]
+?push_w0                  0x0089a6         Code  Gb  vreg_util.o [4]
+?push_w1                  0x0089ab         Code  Gb  vreg_util.o [4]
+?push_w4                  0x0089b0         Code  Gb  vreg_util.o [4]
+?push_w6                  0x0089b5         Code  Gb  vreg_util.o [4]
+?sext32_l0_a              0x008e19         Code  Gb  long.o [4]
+?sext32_l0_x              0x008e0e         Code  Gb  long.o [4]
+?udiv32_l0_l0_l1          0x008d86         Code  Gb  long.o [4]
+?umod32_l1_l0_l1          0x008d86         Code  Gb  long.o [4]
+?w0                       0x000000         Data  Gb  vregs.o [4]
+?w1                       0x000002         Data  Gb  vregs.o [4]
+?w2                       0x000004         Data  Gb  vregs.o [4]
+?w3                       0x000006         Data  Gb  vregs.o [4]
+?w4                       0x000008         Data  Gb  vregs.o [4]
+?w5                       0x00000a         Data  Gb  vregs.o [4]
+?w6                       0x00000c         Data  Gb  vregs.o [4]
+?w7                       0x00000e         Data  Gb  vregs.o [4]
+CSTACK$$Base              0x000300          --   Gb  - Linker created -
+CSTACK$$Limit             0x000400          --   Gb  - Linker created -
+HEAP$$Base              0x00000000          --   Gb  - Linker created -
+HEAP$$Limit             0x00000100          --   Gb  - Linker created -
+INTVEC$$Base              0x008000          --   Gb  - Linker created -
+INTVEC$$Limit             0x008080          --   Gb  - Linker created -
+LoadInt                   0x009185   0x3d  Code  Lc  xprintfsmall.o [4]
+RX_FLAG_END_LINE        0x000004d0    0x2  Data  Gb  uart.o [1]
+Region$$Table$$Base       0x009488          --   Gb  - Linker created -
+Region$$Table$$Limit      0x00949a          --   Gb  - Linker created -
+UART1_GetFlagStatus       0x008e26   0x9e  Code  Gb  stm8s_uart1.o [1]
+UART1_RX_IRQHandler       0x0090c9   0x41  Code  Gb  uart.o [1]
+UART_Configuration        0x00907b   0x4e  Code  Gb  uart.o [1]
+_EncodingSb_Mbtowc        0x0092a1   0x32  Code  Gb  xencoding_sb.o [4]
+_EncodingSb_Mbtowc::initial
+                          0x0096fb    0x8  Data  Lc  xencoding_sb.o [4]
+_EncodingSb_Wctomb        0x00955a   0x17  Code  Gb  xencoding_sb.o [4]
+_EncodingSb_Wctomb::initial
+                          0x0096f3    0x8  Data  Lc  xencoding_sb.o [4]
+_LitobSmall               0x008830  0x176  Code  Lc  xprintfsmall.o [4]
+_LocaleEncoding           0x00966b    0xc  Code  Gb  setlocale.o [4]
+_Locale_Profile         0x000004b6    0xe  Data  Gb  setlocale.o [4]
+_Mbtowc                   0x009446   0x21  Code  Gb  xmbtowc.o [4]
+_PrintfSmall              0x008080  0x445  Code  Gb  xprintfsmall.o [4]
+_PutcharSmall             0x009302   0x2f  Code  Lc  xprintfsmall.o [4]
+_PutcharsSmall            0x00926c   0x35  Code  Lc  xprintfsmall.o [4]
+_PutstrSmall              0x0084c5  0x1dc  Code  Lc  xprintfsmall.o [4]
+_SNProut                  0x00935f   0x2d  Code  Gb  xsnprout.o [4]
+_SProut                   0x009698    0xb  Code  Gb  xsprout.o [4]
+_Wctomb                   0x0094f5   0x1c  Code  Gb  xwctomb.o [4]
+__DebugBreak              0x009797    0x1  Code  Gb  __dbg_break.o [3]
+__exit                    0x0095d6   0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_Mbcurmax            0x009753    0x6  Code  Gb  xmbcurmax.o [4]
+__iar_Memchr              0x009467   0x21  Code  Gb  memchr.o [4]
+__iar_Strchr              0x009571   0x15  Code  Gb  strchr.o [4]
+__iar_Tls_setup__Locale_Profile
+                        0x000004d2    0x2  Data  Gb  setlocale.o [4]
+__iar_copy_init2          0x0093b4         Code  Gb  init_small.o [4]
+__iar_data_init2          0x00959a   0x14  Code  Gb  init.o [4]
+__iar_program_start       0x009610         Code  Gb  cstartup.o [4]
+__iar_unhandled_exception
+                          0x00978f         Code  Gb  unhandled_exception.o [4]
+__iar_zero_init2          0x0094d7         Code  Gb  init_small.o [4]
+__intvec                  0x008000         Data  Gb  interrupt.o [4]
+__low_level_init          0x009789    0x3  Code  Gb  low_level_init.o [4]
+__near_Aldata           0x000004c4    0x4  Data  Gb  xxmemxmalloc.o [4]
+__near_GetMemChunk        0x00952a   0x19  Code  Gb  xgetmemchunk.o [4]
+__near_GetMemChunk::start
+                        0x000004d4    0x2  Data  Lc  xgetmemchunk.o [4]
+__near_findmem            0x008fbf   0x63  Code  Lc  xxmemxmalloc.o [4]
+_exit                     0x009777         Code  Gb  cexit.o [4]
+_interrupt_20             0x0090c9         Code  Gb  uart.o [1]
+ack_results             0x00000222   0x80  Data  Gb  atc_user.o [1]
+array_receive           0x000004a2   0x14  Data  Gb  uart.o [1]
+assert_failed             0x009796    0x1  Code  Gb  main.o [1]
+at                      0x00000100   0xa2  Data  Gb  atc_user.o [1]
+atc_init                  0x0095fd   0x13  Code  Gb  atc_user.o [1]
+atc_state               0x000000bd    0x1  Data  Gb  atc_user.o [1]
+buf                     0x000003a2   0x80  Data  Lc  atc_user.o [1]
+cat_init                  0x008ad5  0x110  Code  Gb  atc.o [1]
+cat_receive_fsm           0x0086a1  0x18f  Code  Gb  atc.o [1]
+cmd_desc                0x000000af    0x2  Data  Gb  atc_user.o [1]
+cmd_group               0x000000a8    0x7  Data  Gb  atc_user.o [1]
+cmd_read                  0x008f56   0x69  Code  Gb  atc_user.o [1]
+cmd_run                   0x009511   0x19  Code  Lc  atc_user.o [1]
+cmd_write                 0x0091fd   0x39  Code  Lc  atc_user.o [1]
+cmds                    0x00000030   0x78  Data  Gb  atc_user.o [1]
+count_array_receive     0x000004ce    0x2  Data  Gb  uart.o [1]
+desc                    0x000000b1    0x8  Data  Gb  atc_user.o [1]
+exit                      0x00978c    0x3  Code  Gb  exit.o [4]
+free                      0x008be5   0xc9  Code  Gb  xxmemxfree.o [4]
+iface                   0x000000b9    0x4  Data  Gb  atc_user.o [1]
+input_index             0x000004ca    0x2  Data  Gb  atc_user.o [1]
+input_text              0x000004c8    0x2  Data  Gb  atc_user.o [1]
+main                      0x009633   0x10  Code  Gb  main.o [1]
+malloc                    0x008ec4   0x92  Code  Gb  xxmemxmalloc.o [4]
+memcpy                    0x00949a   0x1f  Code  Gb  memcpy.o [4]
+my_memset                 0x009400   0x23  Code  Gb  atc.o [1]
+pad                       0x009236   0x36  Code  Lc  xprintfsmall.o [4]
+print_cmd_list            0x009783    0x3  Code  Lc  atc_user.o [1]
+read_char                 0x0092d3   0x2f  Code  Gb  atc_user.o [1]
+read_results            0x000001a2   0x80  Data  Gb  atc_user.o [1]
+reset_state               0x009423   0x23  Code  Lc  atc.o [1]
+run_results             0x000002a2   0x80  Data  Gb  atc_user.o [1]
+snprintf                  0x00910a   0x3e  Code  Gb  snprintf.o [4]
+sprintf                   0x009148   0x3d  Code  Gb  sprintf.o [4]
+strcat                    0x0093dc   0x24  Code  Gb  strcat.o [4]
+string_vars             0x00000024    0xc  Data  Lc  atc_user.o [1]
+strlen                    0x00965e    0xd  Code  Gb  strlen.o [4]
+strncat                   0x009331   0x2e  Code  Gb  strncat.o [4]
+var1                    0x000004d6    0x1  Data  Lc  atc_user.o [1]
+var1_write                0x0095ea   0x13  Code  Lc  atc_user.o [1]
+var1b                   0x000004d9    0x1  Data  Lc  atc_user.o [1]
+var2                    0x000004d7    0x1  Data  Lc  atc_user.o [1]
+var2_write                0x009586   0x14  Code  Lc  atc_user.o [1]
+var2b                   0x000004da    0x1  Data  Lc  atc_user.o [1]
+var3                    0x000004d8    0x1  Data  Lc  atc_user.o [1]
+var3_write                0x009543   0x17  Code  Lc  atc_user.o [1]
+var3b                   0x000004db    0x1  Data  Lc  atc_user.o [1]
+var_string              0x00000422   0x80  Data  Lc  atc_user.o [1]
+var_write                 0x009623   0x10  Code  Lc  atc_user.o [1]
+var_write_size          0x00000000  0x100  Data  Lc  atc_user.o [1]
+var_write_size_index    0x000004cc    0x2  Data  Lc  atc_user.o [1]
+vars                    0x00000000   0x24  Data  Lc  atc_user.o [1]
+write_char                0x00938c   0x28  Code  Gb  atc_user.o [1]
+write_results           0x00000322   0x80  Data  Gb  atc_user.o [1]
+
+
+[1] = D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\3.PERIPHERAL\2.UART\project\Debug\Obj
+[2] = command line
+[3] = dbgstm8smd.a
+[4] = dlstm8smf.a
+
+  5 516 bytes of readonly  code memory
+    516 bytes of readonly  data memory
+  1 962 bytes of readwrite data memory
+
+Errors: 1
+Warnings: none

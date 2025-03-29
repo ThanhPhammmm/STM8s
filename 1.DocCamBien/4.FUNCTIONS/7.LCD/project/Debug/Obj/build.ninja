@@ -1,0 +1,30 @@
+#Generating source browse information for project LCD
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build i2c.pbi : index i2c.xcl
+build lcd16x2.pbi : index lcd16x2.xcl
+build main.pbi : index main.xcl
+build system.pbi : index system.xcl
+build LCD.pbd : link i2c.pbi lcd16x2.pbi main.pbi system.pbi
+build LCD.pbw : browsedata LCD.pbd
+
+

@@ -1,0 +1,46 @@
+#Generating source browse information for project SLAVE_1
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build stm8s_uart1.pbi : index stm8s_uart1.xcl
+build button.pbi : index button.xcl
+build Convert.pbi : index Convert.xcl
+build CreateFrame.pbi : index CreateFrame.xcl
+build Detect.pbi : index Detect.xcl
+build FSM.pbi : index FSM.xcl
+build GetData.pbi : index GetData.xcl
+build gpio.pbi : index gpio.xcl
+build i2c.pbi : index i2c.xcl
+build lcd16x2.pbi : index lcd16x2.xcl
+build main.pbi : index main.xcl
+build MenuLCD.pbi : index MenuLCD.xcl
+build slaved_port.pbi : index slaved_port.xcl
+build system.pbi : index system.xcl
+build tim.pbi : index tim.xcl
+build uart.pbi : index uart.xcl
+build SLAVE_1_part0.pbi : link stm8s_uart1.pbi button.pbi Convert.pbi CreateFrame.pbi
+build SLAVE_1_part1.pbi : link Detect.pbi FSM.pbi GetData.pbi gpio.pbi
+build SLAVE_1_part2.pbi : link i2c.pbi lcd16x2.pbi main.pbi MenuLCD.pbi
+build SLAVE_1_part3.pbi : link slaved_port.pbi system.pbi tim.pbi uart.pbi
+build SLAVE_1.pbd : link SLAVE_1_part0.pbi SLAVE_1_part1.pbi SLAVE_1_part2.pbi SLAVE_1_part3.pbi
+build SLAVE_1.pbw : browsedata SLAVE_1.pbd
+
+

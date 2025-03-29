@@ -1,0 +1,30 @@
+#Generating source browse information for project Detect
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build Convert.pbi : index Convert.xcl
+build CreateFrame.pbi : index CreateFrame.xcl
+build Detect.pbi : index Detect.xcl
+build main.pbi : index main.xcl
+build Detect.pbd : link Convert.pbi CreateFrame.pbi Detect.pbi main.pbi
+build Detect.pbw : browsedata Detect.pbd
+
+

@@ -1,0 +1,665 @@
+###############################################################################
+#
+# IAR ELF Linker V3.11.1.207 for STM8                     22/Mar/2025  17:11:17
+# Copyright 2010-2019 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Exe\MASTER.out
+#    Map file     =  
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\List\MASTER.map
+#    Command line =  
+#        -f C:\Users\THANHP~1\AppData\Local\Temp\EWE570.tmp
+#        (D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\button.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\Convert.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\CreateFrame.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\Detect.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\FSM.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\GetData.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\gpio.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\i2c.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\lcd16x2.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\main.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\MenuLCD.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\port.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\stm8s_tim1.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\stm8s_uart1.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\system.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\tim.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj\uart.o
+#        --redirect _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall
+#        --no_out_extension -o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Exe\MASTER.out
+#        --map
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\List\MASTER.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.3\stm8\config\lnkstm8.icf" --config_def _CSTACK_SIZE=0x100
+#        --config_def _HEAP_SIZE=0x100 --entry __iar_program_start)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__SystemLibrary            = DLib
+__code_model               = small
+__core                     = stm8
+__data_model               = medium
+__dlib_file_descriptor     = 0
+__dlib_full_locale_support = 0
+__rt_version               = 4
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
+"A1":  place at end of [0x000000-0x0017ff] { block CSTACK };
+"P2":  place in [from 0x000000 to 0x0017ff] {
+          block HEAP, rw section .far.bss, rw section .far.data,
+          rw section .far.noinit, rw section .far_func.textrw,
+          rw section .huge.bss, rw section .huge.data, rw section .huge.noinit,
+          rw section .huge_func.textrw, rw section .iar.dynexit,
+          rw section .near.bss, rw section .near.data, rw section .near.noinit,
+          rw section .near_func.textrw };
+"A2":  place at start of [0x008000-0x00ffff] { block INTVEC };
+"P3":  place in [from 0x008000 to 0x00ffff] {
+          ro section .far.data_init, ro section .far_func.textrw_init,
+          ro section .huge.data_init, ro section .huge_func.textrw_init,
+          ro section .iar.init_table, ro section .init_array,
+          ro section .near.data_init, ro section .near.rodata,
+          ro section .near_func.text, ro section .near_func.textrw_init,
+          ro section .tiny.data_init, ro section .tiny.rodata_init };
+do not initialize {
+   rw section .far.noinit, rw section .huge.noinit, rw section .near.noinit,
+   rw section .tiny.noinit, rw section .vregs };
+initialize by copy {
+   rw section .far.bss, rw section .far.data, rw section .far_func.textrw,
+   rw section .huge.bss, rw section .huge.data, rw section .huge_func.textrw,
+   rw section .iar.dynexit, rw section .near.bss, rw section .near.data,
+   rw section .near_func.textrw, rw section .tiny.bss, rw section .tiny.data,
+   ro section .tiny.rodata };
+
+No sections matched the following patterns:
+
+  ro section .far.data_init          in "P3"
+  ro section .far.rodata             in "P4"
+  ro section .far_func.text          in "P4"
+  ro section .far_func.textrw_init   in "P3"
+  ro section .huge.data_init         in "P3"
+  ro section .huge.rodata            in "P5"
+  ro section .huge_func.text         in "P5"
+  ro section .huge_func.textrw_init  in "P3"
+  ro section .iar.init_table         in "P3"
+  ro section .init_array             in "P3"
+  ro section .near_func.textrw_init  in "P3"
+  ro section .tiny.data_init         in "P3"
+  ro section .tiny.rodata_init       in "P3"
+  rw section .eeprom.noinit          in "P6"
+  rw section .far.bss                in "P2"
+  rw section .far.data               in "P2"
+  rw section .far.noinit             in "P2"
+  rw section .far_func.textrw        in "P2"
+  rw section .huge.bss               in "P2"
+  rw section .huge.data              in "P2"
+  rw section .huge.noinit            in "P2"
+  rw section .huge_func.textrw       in "P2"
+  rw section .iar.dynexit            in "P2"
+  rw section .near.noinit            in "P2"
+  rw section .near_func.textrw       in "P2"
+  rw section .tiny.bss               in "P1"
+  rw section .tiny.data              in "P1"
+  rw section .tiny.noinit            in "P1"
+  rw section .tiny.rodata            in "P1"
+
+
+  Section            Kind      Address    Size  Object
+  -------            ----      -------    ----  ------
+"A0":                                     0x10
+  .vregs             uninit   0x000000    0x10  vregs.o [4]
+                            - 0x000010    0x10
+
+"P2", part 1 of 2:                        0x5b
+  P2-1                        0x000010    0x5b  <Init block>
+    .near.data       inited   0x000010     0xe  lcd16x2.o [1]
+    .near.data       inited   0x00001e    0x18  lcd16x2.o [1]
+    .near.data       inited   0x000036     0xb  main.o [1]
+    .near.data       inited   0x000041     0xb  main.o [1]
+    .near.data       inited   0x00004c     0x1  main.o [1]
+    .near.data       inited   0x00004d     0x1  main.o [1]
+    .near.data       inited   0x00004e     0x1  main.o [1]
+    .near.data       inited   0x00004f     0x1  main.o [1]
+    .near.data       inited   0x000050     0x1  MenuLCD.o [1]
+    .near.data       inited   0x000051     0x6  MenuLCD.o [1]
+    .near.data       inited   0x000057     0x6  MenuLCD.o [1]
+    .near.data       inited   0x00005d     0x6  MenuLCD.o [1]
+    .near.data       inited   0x000063     0x6  MenuLCD.o [1]
+    .near.data       inited   0x000069     0x2  MenuLCD.o [1]
+                            - 0x00006b    0x5b
+
+"P2", part 2 of 2:                        0x7d
+  .near.bss          zero     0x00006b    0x14  uart.o [1]
+  .near.bss          zero     0x00007f    0x14  uart.o [1]
+  .near.bss          zero     0x000093    0x12  main.o [1]
+  .near.bss          zero     0x0000a5     0xa  port.o [1]
+  .near.bss          zero     0x0000af     0xa  port.o [1]
+  .near.bss          zero     0x0000b9     0x7  main.o [1]
+  .near.bss          zero     0x0000c0     0x4  Convert.o [1]
+  .near.bss          zero     0x0000c4     0x4  main.o [1]
+  .near.bss          zero     0x0000c8     0x4  main.o [1]
+  .near.bss          zero     0x0000cc     0x2  Convert.o [1]
+  .near.bss          zero     0x0000ce     0x2  main.o [1]
+  .near.bss          zero     0x0000d0     0x1  FSM.o [1]
+  .near.bss          zero     0x0000d1     0x1  FSM.o [1]
+  .near.bss          zero     0x0000d2     0x1  FSM.o [1]
+  .near.bss          zero     0x0000d3     0x1  FSM.o [1]
+  .near.bss          zero     0x0000d4     0x1  FSM.o [1]
+  .near.bss          zero     0x0000d5     0x1  gpio.o [1]
+  .near.bss          zero     0x0000d6     0x1  lcd16x2.o [1]
+  .near.bss          zero     0x0000d7     0x1  lcd16x2.o [1]
+  .near.bss          zero     0x0000d8     0x1  main.o [1]
+  .near.bss          zero     0x0000d9     0x1  main.o [1]
+  .near.bss          zero     0x0000da     0x1  main.o [1]
+  .near.bss          zero     0x0000db     0x1  main.o [1]
+  .near.bss          zero     0x0000dc     0x1  main.o [1]
+  .near.bss          zero     0x0000dd     0x1  main.o [1]
+  .near.bss          zero     0x0000de     0x1  main.o [1]
+  .near.bss          zero     0x0000df     0x1  main.o [1]
+  .near.bss          zero     0x0000e0     0x1  main.o [1]
+  .near.bss          zero     0x0000e1     0x1  main.o [1]
+  .near.bss          zero     0x0000e2     0x1  main.o [1]
+  .near.bss          zero     0x0000e3     0x1  uart.o [1]
+  .near.bss          zero     0x0000e4     0x1  uart.o [1]
+  .near.bss          zero     0x0000e5     0x1  uart.o [1]
+  .near.bss          zero     0x0000e6     0x1  uart.o [1]
+  .near.bss          zero     0x0000e7     0x1  uart.o [1]
+                            - 0x0000e8    0x7d
+
+"A1":                                    0x100
+  CSTACK                      0x001700   0x100  <Block>
+    CSTACK           uninit   0x001700   0x100  <Block tail>
+                            - 0x001800   0x100
+
+"A2":                                     0x80
+  INTVEC                      0x008000    0x80  <Block>
+    .intvec          const    0x008000    0x80  interrupt.o [4]
+                            - 0x008080    0x80
+
+"P3":                                   0x1a4c
+  .near_func.text    ro code  0x008080   0x3bd  lcd16x2.o [1]
+  .near_func.text    ro code  0x00843d   0x32b  float.o [4]
+  .near_func.text    ro code  0x008768   0x30b  main.o [1]
+  .near_func.text    ro code  0x008a73   0x16d  FSM.o [1]
+  .near_func.text    ro code  0x008be0    0xfa  vreg_util.o [4]
+  .near_func.text    ro code  0x008cda    0xb2  button.o [1]
+  .near_func.text    ro code  0x008d8c    0xb1  button.o [1]
+  .near_func.text    ro code  0x008e3d    0xa4  Detect.o [1]
+  .near_func.text    ro code  0x008ee1    0x95  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x008f76    0x8e  uart.o [1]
+  .near_func.text    ro code  0x009004    0x86  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x00908a    0x7a  CreateFrame.o [1]
+  .near_func.text    ro code  0x009104    0x6d  MenuLCD.o [1]
+  .near_func.text    ro code  0x009171    0x63  CreateFrame.o [1]
+  .near_func.text    ro code  0x0091d4    0x63  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x009237    0x5e  i2c.o [1]
+  Initializer bytes  const    0x009295    0x5b  <for P2-1>
+  .near.rodata       const    0x0092f0    0x4e  stm8s_uart1.o [1]
+  .near.rodata       const    0x00933e    0x4d  stm8s_tim1.o [1]
+  .near_func.text    ro code  0x00938b    0x44  uart.o [1]
+  .near_func.text    ro code  0x0093cf    0x44  short.o [4]
+  .near_func.text    ro code  0x009413    0x41  MenuLCD.o [1]
+  .near_func.text    ro code  0x009454    0x40  uart.o [1]
+  .near_func.text    ro code  0x009494    0x39  i2c.o [1]
+  .near_func.text    ro code  0x0094cd    0x36  port.o [1]
+  .near_func.text    ro code  0x009503    0x36  port.o [1]
+  .near_func.text    ro code  0x009539    0x33  CreateFrame.o [1]
+  .near_func.text    ro code  0x00956c    0x31  stm8s_tim1.o [1]
+  .near_func.text    ro code  0x00959d    0x2e  tim.o [1]
+  .near_func.text    ro code  0x0095cb    0x2e  uart.o [1]
+  .near_func.text    ro code  0x0095f9    0x28  init_small.o [4]
+  .near_func.text    ro code  0x009621    0x26  uart.o [1]
+  .near_func.text    ro code  0x009647    0x26  long_util.o [4]
+  .near_func.text    ro code  0x00966d    0x26  dc_util.o [4]
+  .near_func.text    ro code  0x009693    0x22  main.o [1]
+  .iar.init_table    const    0x0096b5    0x12  - Linker created -
+  .near_func.text    ro code  0x0096c7    0x1f  memcpy.o [4]
+  .near_func.text    ro code  0x0096e6    0x1e  init_small.o [4]
+  .near_func.text    ro code  0x009704    0x1b  port.o [1]
+  .near_func.text    ro code  0x00971f    0x1a  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x009739    0x19  button.o [1]
+  .near_func.text    ro code  0x009752    0x19  port.o [1]
+  .near_func.text    ro code  0x00976b    0x18  Convert.o [1]
+  .near_func.text    ro code  0x009783    0x16  memset.o [4]
+  .near_func.text    ro code  0x009799    0x15  FSM.o [1]
+  .near_func.text    ro code  0x0097ae    0x15  lcd16x2.o [1]
+  .near_func.text    ro code  0x0097c3    0x15  system.o [1]
+  .near_func.text    ro code  0x0097d8    0x14  FSM.o [1]
+  .near_func.text    ro code  0x0097ec    0x14  init.o [4]
+  .near_func.text    ro code  0x009800    0x13  cstartup.o [4]
+  .near_func.text    ro code  0x009813    0x12  system.o [1]
+  .near_func.text    ro code  0x009825    0x12  move.o [4]
+  .near.rodata       const    0x009837    0x11  main.o [1]
+  .near.rodata       const    0x009848    0x11  main.o [1]
+  .near_func.text    ro code  0x009859    0x11  gpio.o [1]
+  .near_func.text    ro code  0x00986a    0x10  uart.o [1]
+  .near_func.text    ro code  0x00987a     0xf  CreateFrame.o [1]
+  .near_func.text    ro code  0x009889     0xe  port.o [1]
+  .near_func.text    ro code  0x009897     0xe  tim.o [1]
+  .near_func.text    ro code  0x0098a5     0xd  main.o [1]
+  .near.rodata       const    0x0098b2     0xc  MenuLCD.o [1]
+  .near_func.text    ro code  0x0098be     0xc  Convert.o [1]
+  .near_func.text    ro code  0x0098ca     0xc  MenuLCD.o [1]
+  .near_func.text    ro code  0x0098d6     0xc  MenuLCD.o [1]
+  .near_func.text    ro code  0x0098e2     0xc  port.o [1]
+  .near_func.text    ro code  0x0098ee     0xc  port.o [1]
+  .near.rodata       const    0x0098fa     0xb  MenuLCD.o [1]
+  .near.rodata       const    0x009905     0xb  MenuLCD.o [1]
+  .near_func.text    ro code  0x009910     0xb  button.o [1]
+  .near_func.text    ro code  0x00991b     0xb  CreateFrame.o [1]
+  .near_func.text    ro code  0x009926     0xb  lcd16x2.o [1]
+  .near_func.text    ro code  0x009931     0xb  lcd16x2.o [1]
+  .near_func.text    ro code  0x00993c     0xb  stm8s_tim1.o [1]
+  .near_func.text    ro code  0x009947     0xb  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x009952     0xa  CreateFrame.o [1]
+  .near_func.text    ro code  0x00995c     0xa  lcd16x2.o [1]
+  .near_func.text    ro code  0x009966     0xa  main.o [1]
+  .near_func.text    ro code  0x009970     0xa  main.o [1]
+  .near_func.text    ro code  0x00997a     0xa  port.o [1]
+  .near_func.text    ro code  0x009984     0xa  uart.o [1]
+  .near.rodata       const    0x00998e     0x9  MenuLCD.o [1]
+  .near.rodata       const    0x009997     0x9  MenuLCD.o [1]
+  .near_func.text    ro code  0x0099a0     0x9  CreateFrame.o [1]
+  .near_func.text    ro code  0x0099a9     0x9  CreateFrame.o [1]
+  .near_func.text    ro code  0x0099b2     0x9  gpio.o [1]
+  .near_func.text    ro code  0x0099bb     0x9  gpio.o [1]
+  .near_func.text    ro code  0x0099c4     0x9  MenuLCD.o [1]
+  .near_func.text    ro code  0x0099cd     0x9  port.o [1]
+  .near_func.text    ro code  0x0099d6     0x9  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x0099df     0x8  CreateFrame.o [1]
+  .near_func.text    ro code  0x0099e7     0x8  main.o [1]
+  .near_func.text    ro code  0x0099ef     0x8  main.o [1]
+  .near.rodata       const    0x0099f7     0x7  lcd16x2.o [1]
+  .near_func.text    ro code  0x0099fe     0x7  lcd16x2.o [1]
+  .near_func.text    ro code  0x009a05     0x7  main.o [1]
+  .near_func.text    ro code  0x009a0c     0x7  main.o [1]
+  .near.rodata       const    0x009a13     0x6  lcd16x2.o [1]
+  .near.rodata       const    0x009a19     0x6  MenuLCD.o [1]
+  .near_func.text    ro code  0x009a1f     0x6  CreateFrame.o [1]
+  .near_func.text    ro code  0x009a25     0x6  CreateFrame.o [1]
+  .near_func.text    ro code  0x009a2b     0x6  lcd16x2.o [1]
+  .near_func.text    ro code  0x009a31     0x6  main.o [1]
+  .near_func.text    ro code  0x009a37     0x6  port.o [1]
+  .near_func.text    ro code  0x009a3d     0x6  port.o [1]
+  .near_func.text    ro code  0x009a43     0x6  port.o [1]
+  .near_func.text    ro code  0x009a49     0x6  stm8s_tim1.o [1]
+  .near_func.text    ro code  0x009a4f     0x6  stm8s_uart1.o [1]
+  .near.rodata       const    0x009a55     0x5  lcd16x2.o [1]
+  .near.rodata       const    0x009a5a     0x5  lcd16x2.o [1]
+  .near.rodata       const    0x009a5f     0x5  lcd16x2.o [1]
+  .near_func.text    ro code  0x009a64     0x5  cexit.o [4]
+  .near.rodata       const    0x009a69     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a6d     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a71     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a75     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a79     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a7d     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a81     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a85     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a89     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a8d     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a91     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a95     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a99     0x4  lcd16x2.o [1]
+  .near.rodata       const    0x009a9d     0x4  lcd16x2.o [1]
+  .near_func.text    ro code  0x009aa1     0x4  CreateFrame.o [1]
+  .near_func.text    ro code  0x009aa5     0x4  FSM.o [1]
+  .near_func.text    ro code  0x009aa9     0x4  FSM.o [1]
+  .near_func.text    ro code  0x009aad     0x4  lcd16x2.o [1]
+  .near_func.text    ro code  0x009ab1     0x4  stm8s_uart1.o [1]
+  .near_func.text    ro code  0x009ab5     0x3  GetData.o [1]
+  .near_func.text    ro code  0x009ab8     0x3  GetData.o [1]
+  .near_func.text    ro code  0x009abb     0x3  interrupt.o [4]
+  .near_func.text    ro code  0x009abe     0x3  low_level_init.o [4]
+  .near_func.text    ro code  0x009ac1     0x3  exit.o [4]
+  .near_func.text    ro code  0x009ac4     0x3  unhandled_exception.o [4]
+  .near.rodata       const    0x009ac7     0x2  MenuLCD.o [1]
+  .near_func.text    ro code  0x009ac9     0x2  xxexit.o [3]
+  .near_func.text    ro code  0x009acb     0x1  main.o [1]
+                            - 0x009acc  0x1a4c
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address   Size
+          -------   ----
+Zero (__iar_zero_init2)
+    1 destination range, total size 0x7d:
+          0x00006b  0x7d
+
+Copy (__iar_copy_init2)
+    1 source range, total size 0x5b:
+          0x009295  0x5b
+    1 destination range, total size 0x5b:
+          0x000010  0x5b
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj: [1]
+    Convert.o                   36                 6
+    CreateFrame.o              350
+    Detect.o                   164
+    FSM.o                      414                 5
+    GetData.o                    6
+    MenuLCD.o                  207       87       27
+    button.o                   391
+    gpio.o                      35                 1
+    i2c.o                      151
+    lcd16x2.o                1 027      122       40
+    main.o                     883       60       72
+    port.o                     235                20
+    stm8s_tim1.o                66       77
+    stm8s_uart1.o              438       78
+    system.o                    39
+    tim.o                       60
+    uart.o                     384                45
+    ------------------------------------------------
+    Total:                   4 886      424      216
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dbgstm8smn.a: [3]
+    xxexit.o                     2
+    ------------------------------------------------
+    Total:                       2
+
+dlstm8smn.a: [4]
+    cexit.o                      5
+    cstartup.o                  19
+    dc_util.o                   38
+    exit.o                       3
+    float.o                    811
+    init.o                      20
+    init_small.o                70
+    interrupt.o                  3      128
+    long_util.o                 38
+    low_level_init.o             3
+    memcpy.o                    31
+    memset.o                    22
+    move.o                      18
+    short.o                     68
+    unhandled_exception.o        3
+    vreg_util.o                250
+    vregs.o                                       16
+    ------------------------------------------------
+    Total:                   1 402      128       16
+
+    Linker created                       18      256
+----------------------------------------------------
+    Grand Total:             6 290      570      488
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address   Size  Type      Object
+-----                    -------   ----  ----      ------
+.iar.init_table$$Base   0x0096b5          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x0096c7          --   Gb  - Linker created -
+?b0                     0x000000         Data  Gb  vregs.o [4]
+?b1                     0x000001         Data  Gb  vregs.o [4]
+?b10                    0x00000a         Data  Gb  vregs.o [4]
+?b11                    0x00000b         Data  Gb  vregs.o [4]
+?b12                    0x00000c         Data  Gb  vregs.o [4]
+?b13                    0x00000d         Data  Gb  vregs.o [4]
+?b14                    0x00000e         Data  Gb  vregs.o [4]
+?b15                    0x00000f         Data  Gb  vregs.o [4]
+?b2                     0x000002         Data  Gb  vregs.o [4]
+?b3                     0x000003         Data  Gb  vregs.o [4]
+?b4                     0x000004         Data  Gb  vregs.o [4]
+?b5                     0x000005         Data  Gb  vregs.o [4]
+?b6                     0x000006         Data  Gb  vregs.o [4]
+?b7                     0x000007         Data  Gb  vregs.o [4]
+?b8                     0x000008         Data  Gb  vregs.o [4]
+?b9                     0x000009         Data  Gb  vregs.o [4]
+?dc16_w0                0x00966d         Code  Gb  dc_util.o [4]
+?dc32_l1                0x00967b         Code  Gb  dc_util.o [4]
+?dc32_px                0x009688         Code  Gb  dc_util.o [4]
+?e0                     0x000001         Data  Gb  vregs.o [4]
+?e1                     0x000005         Data  Gb  vregs.o [4]
+?e2                     0x000009         Data  Gb  vregs.o [4]
+?e3                     0x00000d         Data  Gb  vregs.o [4]
+?epilogue_l2            0x008c6f         Code  Gb  vreg_util.o [4]
+?epilogue_l2_l3         0x008c6c         Code  Gb  vreg_util.o [4]
+?epilogue_w4            0x008c73         Code  Gb  vreg_util.o [4]
+?fadd32_l0_l0_l1        0x008460         Code  Gb  float.o [4]
+?fcastf32s16_l0_x       0x008623         Code  Gb  float.o [4]
+?fcasts16f32_x_l0       0x008646         Code  Gb  float.o [4]
+?fcmplt32_c_l0_0x       0x0085cd         Code  Gb  float.o [4]
+?fcmplt32_c_l0_dc32     0x0085c8         Code  Gb  float.o [4]
+?fmul32_l0_l0_dc32      0x00852e         Code  Gb  float.o [4]
+?fmul32_l0_l0_l1        0x008533         Code  Gb  float.o [4]
+?fsub32_l0_l0_l1        0x00845a         Code  Gb  float.o [4]
+?l0                     0x000000         Data  Gb  vregs.o [4]
+?l1                     0x000004         Data  Gb  vregs.o [4]
+?l2                     0x000008         Data  Gb  vregs.o [4]
+?l3                     0x00000c         Data  Gb  vregs.o [4]
+?load32_0x_l0           0x00965f         Code  Gb  long_util.o [4]
+?load32_l0_0x           0x009647         Code  Gb  long_util.o [4]
+?load32_l1_0x           0x009653         Code  Gb  long_util.o [4]
+?longfarg16_v_w0_a      0x009825         Code  Gb  move.o [4]
+?longfarg16_v_w0_x      0x009827         Code  Gb  move.o [4]
+?mov_e0_e1              0x008c88         Code  Gb  vreg_util.o [4]
+?mov_e0_e2              0x008c95         Code  Gb  vreg_util.o [4]
+?mov_e0_e3              0x008ca2         Code  Gb  vreg_util.o [4]
+?mov_e1_e0              0x008caf         Code  Gb  vreg_util.o [4]
+?mov_e2_e1              0x008cbc         Code  Gb  vreg_util.o [4]
+?mov_e3_e0              0x008cc9         Code  Gb  vreg_util.o [4]
+?mov_l0_l1              0x008c85         Code  Gb  vreg_util.o [4]
+?mov_l0_l2              0x008c92         Code  Gb  vreg_util.o [4]
+?mov_l0_l3              0x008c9f         Code  Gb  vreg_util.o [4]
+?mov_l1_l0              0x008cac         Code  Gb  vreg_util.o [4]
+?mov_l2_l1              0x008cb9         Code  Gb  vreg_util.o [4]
+?mov_l3_l0              0x008cc6         Code  Gb  vreg_util.o [4]
+?mov_w0_w3              0x008c77         Code  Gb  vreg_util.o [4]
+?mov_w1_w3              0x008c8b         Code  Gb  vreg_util.o [4]
+?mov_w1_w5              0x008c98         Code  Gb  vreg_util.o [4]
+?mov_w1_w7              0x008ca5         Code  Gb  vreg_util.o [4]
+?mov_w2_w1              0x008c7e         Code  Gb  vreg_util.o [4]
+?mov_w3_w1              0x008cb2         Code  Gb  vreg_util.o [4]
+?mov_w5_w3              0x008cbf         Code  Gb  vreg_util.o [4]
+?mov_w7_w1              0x008ccc         Code  Gb  vreg_util.o [4]
+?mov_w7_w5              0x008cd3         Code  Gb  vreg_util.o [4]
+?pop_l0                 0x008c38         Code  Gb  vreg_util.o [4]
+?pop_l1                 0x008c43         Code  Gb  vreg_util.o [4]
+?pop_l2                 0x008c4e         Code  Gb  vreg_util.o [4]
+?pop_l3                 0x008c59         Code  Gb  vreg_util.o [4]
+?pop_w4                 0x008bf8         Code  Gb  vreg_util.o [4]
+?push_l0                0x008c07         Code  Gb  vreg_util.o [4]
+?push_l1                0x008c0c         Code  Gb  vreg_util.o [4]
+?push_l2                0x008c11         Code  Gb  vreg_util.o [4]
+?push_l3                0x008c16         Code  Gb  vreg_util.o [4]
+?push_w4                0x008be0         Code  Gb  vreg_util.o [4]
+?sdiv16_x_x_y           0x0093cf         Code  Gb  short.o [4]
+?sll16_x_x_a            0x009403         Code  Gb  short.o [4]
+?smod16_y_x_y           0x0093e8         Code  Gb  short.o [4]
+?sra16_x_x_a            0x00940b         Code  Gb  short.o [4]
+?w0                     0x000000         Data  Gb  vregs.o [4]
+?w1                     0x000002         Data  Gb  vregs.o [4]
+?w2                     0x000004         Data  Gb  vregs.o [4]
+?w3                     0x000006         Data  Gb  vregs.o [4]
+?w4                     0x000008         Data  Gb  vregs.o [4]
+?w5                     0x00000a         Data  Gb  vregs.o [4]
+?w6                     0x00000c         Data  Gb  vregs.o [4]
+?w7                     0x00000e         Data  Gb  vregs.o [4]
+?xor16_x_x_dw           0x0093f8         Code  Gb  short.o [4]
+?xor16_x_x_w0           0x0093fb         Code  Gb  short.o [4]
+ButtonA2                0x000036    0xb  Data  Gb  main.o [1]
+ButtonA3                0x000041    0xb  Data  Gb  main.o [1]
+Button_Init             0x009739   0x19  Code  Gb  button.o [1]
+Button_ReadInput        0x008d8c   0xb1  Code  Gb  button.o [1]
+Button_Run              0x008cda   0xb2  Code  Gb  button.o [1]
+CLK_HSI_16Mhz_config    0x009813   0x12  Code  Gb  system.o [1]
+CSTACK$$Base            0x001700          --   Gb  - Linker created -
+CSTACK$$Limit           0x001800          --   Gb  - Linker created -
+Check_Fsm_Flag_New_Message
+                        0x009aa9    0x4  Code  Gb  FSM.o [1]
+Check_Sum               0x009539   0x33  Code  Gb  CreateFrame.o [1]
+Clear_All_State_Fsm     0x009aa5    0x4  Code  Gb  FSM.o [1]
+Convert_bytes_into_float
+                        0x00976b   0x18  Code  Gb  Convert.o [1]
+Convert_bytes_into_float::tmp
+                        0x0000c0    0x4  Data  Lc  Convert.o [1]
+Convert_bytes_into_uint16_t
+                        0x0098be    0xc  Code  Gb  Convert.o [1]
+Convert_bytes_into_uint16_t::tmp
+                        0x0000cc    0x2  Data  Lc  Convert.o [1]
+Delay_ms                0x0097c3   0x15  Code  Gb  system.o [1]
+FSM_Get_Message         0x008a73  0x16d  Code  Gb  FSM.o [1]
+Get_Sensor              0x009ab8    0x3  Code  Gb  GetData.o [1]
+Get_slave               0x009ab5    0x3  Code  Gb  GetData.o [1]
+Gpio_Read_Input_Port_A  0x0099b2    0x9  Code  Gb  gpio.o [1]
+Gpio_Read_Input_Port_D  0x0099bb    0x9  Code  Gb  gpio.o [1]
+I2c_Init                0x009494   0x39  Code  Gb  i2c.o [1]
+I2c_write               0x009237   0x5e  Code  Gb  i2c.o [1]
+INTVEC$$Base            0x008000          --   Gb  - Linker created -
+INTVEC$$Limit           0x008080          --   Gb  - Linker created -
+LCD_Display_Float       0x00814f   0xe3  Code  Gb  lcd16x2.o [1]
+LCD_Init                0x0080f7   0x31  Code  Gb  lcd16x2.o [1]
+LCD_Send16BitNumber     0x00824a   0x66  Code  Gb  lcd16x2.o [1]
+LCD_Send16BitNumber_RTC
+                        0x0082b7   0x54  Code  Gb  lcd16x2.o [1]
+LCD_SendCommand         0x008080    0xd  Code  Gb  lcd16x2.o [1]
+LCD_SendData            0x0080a6   0x17  Code  Gb  lcd16x2.o [1]
+LCD_SendString          0x0080e7   0x10  Code  Gb  lcd16x2.o [1]
+LCD_Set_Cursor          0x008138   0x17  Code  Gb  lcd16x2.o [1]
+MainMenu                0x000063    0x6  Data  Gb  MenuLCD.o [1]
+Menu_Display_Select     0x009413   0x41  Code  Gb  MenuLCD.o [1]
+Message_Detect_TypeMessage
+                        0x008e3d   0xa4  Code  Gb  Detect.o [1]
+Message_Frame_Create_Ask_Data_Sensor
+                        0x009171   0x63  Code  Gb  CreateFrame.o [1]
+Message_Frame_Create_Set_Slave
+                        0x00908a   0x7a  Code  Gb  CreateFrame.o [1]
+RTC                     0x000051    0x6  Data  Gb  MenuLCD.o [1]
+Receive_Slave_Data_LUX  0x009a37    0x6  Code  Gb  port.o [1]
+Receive_Slave_Data_NTC  0x009a43    0x6  Code  Gb  port.o [1]
+Receive_Slave_Data_RES  0x009a3d    0x6  Code  Gb  port.o [1]
+Receive_Slave_Data_RTC  0x009704   0x1b  Code  Gb  port.o [1]
+Region$$Table$$Base     0x0096b5          --   Gb  - Linker created -
+Region$$Table$$Limit    0x0096c7          --   Gb  - Linker created -
+Request_Slave           0x0098e2    0xc  Code  Gb  port.o [1]
+Request_Slave_Data      0x0098ee    0xc  Code  Gb  port.o [1]
+SLAVE1_MENU             0x00005d    0x6  Data  Gb  MenuLCD.o [1]
+SLAVE2_MENU             0x000057    0x6  Data  Gb  MenuLCD.o [1]
+Send_Data_To_LCD        0x009104   0x6d  Code  Gb  MenuLCD.o [1]
+Send_RTC_To_LCD         0x008382   0xb6  Code  Gb  lcd16x2.o [1]
+TIM1_BaseInit           0x00959d   0x2e  Code  Gb  tim.o [1]
+TIM1_CLEAR_IT_PENDING   0x009897    0xe  Code  Gb  tim.o [1]
+TIM1_ITConfig           0x00956c   0x31  Code  Gb  stm8s_tim1.o [1]
+TIM1_UPD_OVF_IRQHandler
+                        0x009693   0x22  Code  Gb  main.o [1]
+UART1_ClearITPendingBit
+                        0x00971f   0x1a  Code  Gb  stm8s_uart1.o [1]
+UART1_GetFlagStatus     0x0091d4   0x63  Code  Gb  stm8s_uart1.o [1]
+UART1_GetITStatus       0x009004   0x86  Code  Gb  stm8s_uart1.o [1]
+UART1_ITConfig          0x008ee1   0x95  Code  Gb  stm8s_uart1.o [1]
+UART1_RX_IRQHandler     0x008f76   0x8e  Code  Gb  uart.o [1]
+UART1_SendData8         0x009ab1    0x4  Code  Gb  stm8s_uart1.o [1]
+UART1_TX_IRQHandler     0x00938b   0x44  Code  Gb  uart.o [1]
+UART_Configuration      0x009454   0x40  Code  Gb  uart.o [1]
+UART_Send_Array_IT      0x0095cb   0x2e  Code  Gb  uart.o [1]
+Wait_For_Ack            0x0094cd   0x36  Code  Gb  port.o [1]
+Wait_For_Respond        0x009503   0x36  Code  Gb  port.o [1]
+Wait_For_UART_Frame_1s  0x009621   0x26  Code  Gb  uart.o [1]
+__exit                  0x009ac9    0x2  Code  Gb  xxexit.o [3]
+__iar_copy_init2        0x0095f9         Code  Gb  init_small.o [4]
+__iar_data_init2        0x0097ec   0x14  Code  Gb  init.o [4]
+__iar_program_start     0x009800         Code  Gb  cstartup.o [4]
+__iar_unhandled_exception
+                        0x009ac4         Code  Gb  unhandled_exception.o [4]
+__iar_zero_init2        0x0096e6         Code  Gb  init_small.o [4]
+__intvec                0x008000         Data  Gb  interrupt.o [4]
+__low_level_init        0x009abe    0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x009a64         Code  Gb  cexit.o [4]
+_interrupt_13           0x009693         Code  Gb  main.o [1]
+_interrupt_19           0x00938b         Code  Gb  uart.o [1]
+_interrupt_20           0x008f76         Code  Gb  uart.o [1]
+array_receive           0x00006b   0x14  Data  Gb  uart.o [1]
+array_set_slave         0x0000a5    0xa  Data  Gb  port.o [1]
+assert_failed           0x009acb    0x1  Code  Gb  main.o [1]
+button_flag             0x0000e1    0x1  Data  Gb  main.o [1]
+count_array_receive     0x0000e3    0x1  Data  Gb  uart.o [1]
+count_element_arr       0x0000d1    0x1  Data  Gb  FSM.o [1]
+count_timeout_uart      0x0000e4    0x1  Data  Gb  uart.o [1]
+currentMenu             0x000069    0x2  Data  Gb  MenuLCD.o [1]
+data_sensor1            0x0000c4    0x4  Data  Gb  main.o [1]
+data_sensor2            0x0000ce    0x2  Data  Gb  main.o [1]
+data_sensor3            0x0000b9    0x7  Data  Gb  main.o [1]
+data_sensor4            0x0000c8    0x4  Data  Gb  main.o [1]
+days_of_week            0x000010    0xe  Data  Gb  lcd16x2.o [1]
+detected_frame          0x000093   0x12  Data  Gb  main.o [1]
+exit                    0x009ac1    0x3  Code  Gb  exit.o [4]
+flag_array_receive      0x0000e5    0x1  Data  Gb  uart.o [1]
+flag_fsm_new_message    0x0000d4    0x1  Data  Gb  FSM.o [1]
+fsm_state               0x0000d0    0x1  Data  Gb  FSM.o [1]
+highNibble              0x0000d6    0x1  Data  Gb  lcd16x2.o [1]
+length_fsm              0x0000d3    0x1  Data  Gb  FSM.o [1]
+lowNibble               0x0000d7    0x1  Data  Gb  lcd16x2.o [1]
+main                    0x008768  0x30b  Code  Gb  main.o [1]
+memcpy                  0x0096c7   0x1f  Code  Gb  memcpy.o [4]
+memset                  0x009783   0x16  Code  Gb  memset.o [4]
+months                  0x00001e   0x18  Data  Gb  lcd16x2.o [1]
+receive_confirm_slave1_sensorLux
+                        0x0000d8    0x1  Data  Gb  main.o [1]
+receive_confirm_slave1_sensorRES
+                        0x0000d9    0x1  Data  Gb  main.o [1]
+receive_confirm_slave2_sensorNTC
+                        0x0000dd    0x1  Data  Gb  main.o [1]
+receive_confirm_slave2_sensorRTC
+                        0x0000dc    0x1  Data  Gb  main.o [1]
+receive_data_slave1_sensorLux
+                        0x0000da    0x1  Data  Gb  main.o [1]
+receive_data_slave1_sensorRES
+                        0x0000db    0x1  Data  Gb  main.o [1]
+receive_data_slave2_sensorNTC
+                        0x0000df    0x1  Data  Gb  main.o [1]
+receive_data_slave2_sensorRTC
+                        0x0000de    0x1  Data  Gb  main.o [1]
+receive_flag            0x0000e0    0x1  Data  Gb  main.o [1]
+requestFrame            0x0000af    0xa  Data  Gb  port.o [1]
+select                  0x000050    0x1  Data  Gb  MenuLCD.o [1]
+slave1_lux              0x00004c    0x1  Data  Gb  main.o [1]
+slave1_res              0x00004d    0x1  Data  Gb  main.o [1]
+slave2_ntc              0x00004f    0x1  Data  Gb  main.o [1]
+slave2_rtc              0x00004e    0x1  Data  Gb  main.o [1]
+start_flag              0x0000e2    0x1  Data  Gb  main.o [1]
+txBuffer                0x00007f   0x14  Data  Gb  uart.o [1]
+txIndex                 0x0000e6    0x1  Data  Gb  uart.o [1]
+txLength                0x0000e7    0x1  Data  Gb  uart.o [1]
+type_mess_fsm           0x0000d2    0x1  Data  Gb  FSM.o [1]
+value                   0x0000d5    0x1  Data  Gb  gpio.o [1]
+
+
+[1] = D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\Release\Obj
+[2] = command line
+[3] = dbgstm8smn.a
+[4] = dlstm8smn.a
+
+  6 290 bytes of readonly  code memory
+    570 bytes of readonly  data memory
+    488 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

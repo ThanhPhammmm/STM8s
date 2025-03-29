@@ -1,0 +1,35 @@
+#Generating source browse information for project FSM
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build stm8s_uart1.pbi : index stm8s_uart1.xcl
+build Convert.pbi : index Convert.xcl
+build CreateFrame.pbi : index CreateFrame.xcl
+build FSM.pbi : index FSM.xcl
+build main.pbi : index main.xcl
+build uart.pbi : index uart.xcl
+build FSM_part0.pbi : link stm8s_uart1.pbi Convert.pbi
+build FSM_part1.pbi : link CreateFrame.pbi FSM.pbi
+build FSM_part2.pbi : link main.pbi uart.pbi
+build FSM.pbd : link FSM_part0.pbi FSM_part1.pbi FSM_part2.pbi
+build FSM.pbw : browsedata FSM.pbd
+
+
