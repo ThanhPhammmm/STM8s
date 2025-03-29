@@ -31,7 +31,8 @@ void Send_Sensor_Data_RES_Slave1();
 void Send_Sensor_Data_RTC_Slave2();
 void Send_Sensor_Data_NTC_Slave2();
 
-
+extern float lux_value;
+extern uint16_t adc_value;
 
 #ifdef __cplusplus
 }

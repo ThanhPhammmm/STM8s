@@ -42,10 +42,10 @@ RTC_Date_t current_date;
 
 INTERRUPT_HANDLER(TIM1_UPD_OVF_IRQHandler, 11)
 {
-      TIM1_CLEAR_IT_PENDING(UPDATE_EVENT);
-
   Get_Current_Time(&current_time);
   Get_Current_Date(&current_date);
+        TIM1_CLEAR_IT_PENDING(UPDATE_EVENT);
+
 }
 
 int main(void){
@@ -74,7 +74,7 @@ int main(void){
   Set_Current_Time(&current_time);
   Set_Current_Date(&current_date);
   //GPIO_Init(DHT11_PORT, DHT11_PIN, GPIO_MODE_IN_FL_NO_IT);
-  //TIM1_BaseInit(15999, COUNT_UP, 1000 - 1, 0);  // 1s period
+  //TIM1_BaseInit(15999, COUNT_UP, 600 - 1, 0);  // 1s period
   while(1){
     
     //UART_Time_Out();
@@ -118,6 +118,7 @@ int main(void){
         case slave2_sensorRTC_WaitingAsk:
             if (Wait_For_UART_Frame_1s()) {
                 if (Wait_For_Ask_Data_Slave2_SensorRTC()) {
+
                     Send_Sensor_Data_RTC_Slave2();
                     receive_flag = 1;
                     slaveX_sensorX = slave2_sensorRTC_Switching;

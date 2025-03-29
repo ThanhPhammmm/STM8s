@@ -52438,7 +52438,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3846@F@main@type_message",
+    "ID": "c:main.c@3847@F@main@type_message",
     "What": "Variable",
     "defdec": "Def",
     "display": "type_message",
@@ -52452,7 +52452,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5957@F@main@type_message",
+    "ID": "c:main.c@5958@F@main@type_message",
     "What": "Variable",
     "defdec": "Def",
     "display": "type_message",
@@ -55290,7 +55290,7 @@
     "display": "void Get_Current_Date(RTC_Date_t *)",
     "location": {
       "column": "6",
-      "line": "162",
+      "line": "163",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\2.SLAVE_2\\user\\RTC.c"
     },
     "name": "Get_Current_Date",
@@ -55304,7 +55304,7 @@
     "display": "void TimeToArray(RTC_Time_t *)",
     "location": {
       "column": "6",
-      "line": "170",
+      "line": "171",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\2.SLAVE_2\\user\\RTC.c"
     },
     "name": "TimeToArray",
@@ -55318,7 +55318,7 @@
     "display": "void DateToArray(RTC_Date_t *)",
     "location": {
       "column": "6",
-      "line": "175",
+      "line": "176",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\2.SLAVE_2\\user\\RTC.c"
     },
     "name": "DateToArray",

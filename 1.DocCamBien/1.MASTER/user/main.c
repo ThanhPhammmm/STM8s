@@ -77,7 +77,11 @@ INTERRUPT_HANDLER(TIM1_UPD_OVF_IRQHandler, 11)
 
     button_flag = 1; // Set flag to process button in main loop
 }
-
+//INTERRUPT_HANDLER(TIM2_UPD_OVF_IRQHandler, 13)
+//{
+//    Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
+//    TIM2_CLEAR_IT_PENDING(UPDATE_EVENT);
+//}
 int main(void){
   CLK_HSI_16Mhz_config();
   
@@ -101,8 +105,8 @@ int main(void){
   
   Button_Init();
   
-TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
-  
+  TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
+  //TIM2_BaseInit(15999, COUNT_UP, 800 - 1);
   volatile uint8_t Master_works_with_slaveX_sensorX = Sending_SetSlave_to_slave1_sensorLux;
   
   while(1){
@@ -111,9 +115,10 @@ TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
       button_flag = 0;  // Clear flag
       Button_Run(&ButtonA3);
       Button_Run(&ButtonA2);
-      TIM1_ITConfig(TIM1_IT_UPDATE, ENABLE); // Disable timer interrupt temporarily
+      TIM1_ITConfig(TIM1_IT_UPDATE, ENABLE); // Enable timer interrupt temporarily
     }
     if(start_flag == 1){
+      //Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
       switch (Master_works_with_slaveX_sensorX) {
         //slave1_sensorLux
         case Sending_SetSlave_to_slave1_sensorLux:
@@ -156,6 +161,7 @@ TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
             receive_data_slave1_sensorLux = 1;
             if (Wait_For_Respond(SLAVE_1, SENSOR_LUX)) {
               data_sensor1 = Receive_Slave_Data_LUX();
+              Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
               Master_works_with_slaveX_sensorX = Sending_SetSlave_to_slave1_sensorRES;
             } 
             else {
@@ -208,8 +214,9 @@ TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
             receive_data_slave1_sensorRES = 1;
             if (Wait_For_Respond(SLAVE_1, SENSOR_RES)) {
               data_sensor2 = Receive_Slave_Data_RES();
+              Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
               Master_works_with_slaveX_sensorX = Sending_SetSlave_to_slave2_sensorRTC;
-              memset(array_receive, 0, sizeof(array_receive));
+              //memset(array_receive, 0, sizeof(array_receive));
             } 
             else {
               receive_flag = 1;
@@ -263,6 +270,7 @@ TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
             receive_data_slave2_sensorRTC = 1;
             if (Wait_For_Respond(SLAVE_2, SENSOR_RTC)) {
               Receive_Slave_Data_RTC(data_sensor3);
+              Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
               Master_works_with_slaveX_sensorX = Sending_SetSlave_to_slave2_sensorNTC;
             } 
             else {
@@ -310,8 +318,9 @@ TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
             receive_data_slave2_sensorNTC = 1;
             if (Wait_For_Respond(SLAVE_2, SENSOR_NTC)) {
               data_sensor4 = Receive_Slave_Data_NTC();
+              Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
               Master_works_with_slaveX_sensorX = Sending_SetSlave_to_slave1_sensorLux;
-              memset(array_receive, 0, sizeof(array_receive));
+              //memset(array_receive, 0, sizeof(array_receive));
 
               // Reset confirmation and data flags
               receive_confirm_slave1_sensorLux = 0;
@@ -329,10 +338,7 @@ TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
               slave1_lux = 1;
               slave1_res = 1;
               slave2_rtc = 1;
-              slave2_ntc = 1;           
-              
-                            Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
-
+              slave2_ntc = 1;                 
             } 
             else {
               receive_flag = 1;

@@ -49602,7 +49602,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "81",
+      "line": "85",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\main.c"
     },
     "name": "main",
@@ -49610,13 +49610,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3016@F@main@Master_works_with_slaveX_sensorX",
+    "ID": "c:main.c@3243@F@main@Master_works_with_slaveX_sensorX",
     "What": "Variable",
     "defdec": "Def",
     "display": "Master_works_with_slaveX_sensorX",
     "location": {
       "column": "20",
-      "line": "106",
+      "line": "110",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\main.c"
     },
     "name": "Master_works_with_slaveX_sensorX",
@@ -50828,272 +50828,6 @@
     "scope": null
   },
   {
-    "ID": "c:port.h@26@macro@__PORT_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__PORT_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "__PORT_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@detected_frame",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "detected_frame",
-    "location": {
-      "column": "24",
-      "line": "14",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "detected_frame",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@array_receive",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "array_receive",
-    "location": {
-      "column": "16",
-      "line": "15",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "array_receive",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Request_Slave",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Request_Slave(slave_e)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Request_Slave",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Request_Slave",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Request_Slave(slave_e)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Request_Slave",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Wait_For_Ack",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t Wait_For_Ack(slave_e, type_Sensor_e)",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Wait_For_Ack",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Wait_For_Ack",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t Wait_For_Ack(slave_e, type_Sensor_e)",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Wait_For_Ack",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Wait_For_Respond",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t Wait_For_Respond(slave_e, type_Sensor_e)",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Wait_For_Respond",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Wait_For_Respond",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t Wait_For_Respond(slave_e, type_Sensor_e)",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Wait_For_Respond",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Request_Slave_Data",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Request_Slave_Data(slave_e, type_Sensor_e)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Request_Slave_Data",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Request_Slave_Data",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Request_Slave_Data(slave_e, type_Sensor_e)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Request_Slave_Data",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Receive_Slave_Data_LUX",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "float Receive_Slave_Data_LUX(void)",
-    "location": {
-      "column": "7",
-      "line": "21",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Receive_Slave_Data_LUX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Receive_Slave_Data_LUX",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "float Receive_Slave_Data_LUX(void)",
-    "location": {
-      "column": "7",
-      "line": "21",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Receive_Slave_Data_LUX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Receive_Slave_Data_RES",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint16_t Receive_Slave_Data_RES(void)",
-    "location": {
-      "column": "10",
-      "line": "22",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Receive_Slave_Data_RES",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Receive_Slave_Data_RES",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint16_t Receive_Slave_Data_RES(void)",
-    "location": {
-      "column": "10",
-      "line": "22",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Receive_Slave_Data_RES",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Receive_Slave_Data_RTC",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Receive_Slave_Data_RTC(uint8_t *)",
-    "location": {
-      "column": "6",
-      "line": "23",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Receive_Slave_Data_RTC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Receive_Slave_Data_RTC",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Receive_Slave_Data_RTC(uint8_t *)",
-    "location": {
-      "column": "6",
-      "line": "23",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Receive_Slave_Data_RTC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Receive_Slave_Data_NTC",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "float Receive_Slave_Data_NTC(void)",
-    "location": {
-      "column": "7",
-      "line": "24",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Receive_Slave_Data_NTC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Receive_Slave_Data_NTC",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "float Receive_Slave_Data_NTC(void)",
-    "location": {
-      "column": "7",
-      "line": "24",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
-    },
-    "name": "Receive_Slave_Data_NTC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:uart.h@26@macro@__UART_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -51664,6 +51398,272 @@
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\tim.h"
     },
     "name": "TIM2_CLEAR_IT_PENDING",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:port.h@26@macro@__PORT_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__PORT_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "__PORT_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@detected_frame",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "detected_frame",
+    "location": {
+      "column": "24",
+      "line": "14",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "detected_frame",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@array_receive",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "array_receive",
+    "location": {
+      "column": "16",
+      "line": "15",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "array_receive",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Request_Slave",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Request_Slave(slave_e)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Request_Slave",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Request_Slave",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Request_Slave(slave_e)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Request_Slave",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Wait_For_Ack",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t Wait_For_Ack(slave_e, type_Sensor_e)",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Wait_For_Ack",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Wait_For_Ack",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t Wait_For_Ack(slave_e, type_Sensor_e)",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Wait_For_Ack",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Wait_For_Respond",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t Wait_For_Respond(slave_e, type_Sensor_e)",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Wait_For_Respond",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Wait_For_Respond",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t Wait_For_Respond(slave_e, type_Sensor_e)",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Wait_For_Respond",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Request_Slave_Data",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Request_Slave_Data(slave_e, type_Sensor_e)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Request_Slave_Data",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Request_Slave_Data",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Request_Slave_Data(slave_e, type_Sensor_e)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Request_Slave_Data",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Receive_Slave_Data_LUX",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "float Receive_Slave_Data_LUX(void)",
+    "location": {
+      "column": "7",
+      "line": "21",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Receive_Slave_Data_LUX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Receive_Slave_Data_LUX",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "float Receive_Slave_Data_LUX(void)",
+    "location": {
+      "column": "7",
+      "line": "21",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Receive_Slave_Data_LUX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Receive_Slave_Data_RES",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint16_t Receive_Slave_Data_RES(void)",
+    "location": {
+      "column": "10",
+      "line": "22",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Receive_Slave_Data_RES",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Receive_Slave_Data_RES",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint16_t Receive_Slave_Data_RES(void)",
+    "location": {
+      "column": "10",
+      "line": "22",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Receive_Slave_Data_RES",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Receive_Slave_Data_RTC",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Receive_Slave_Data_RTC(uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "23",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Receive_Slave_Data_RTC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Receive_Slave_Data_RTC",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Receive_Slave_Data_RTC(uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "23",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Receive_Slave_Data_RTC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Receive_Slave_Data_NTC",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "float Receive_Slave_Data_NTC(void)",
+    "location": {
+      "column": "7",
+      "line": "24",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Receive_Slave_Data_NTC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Receive_Slave_Data_NTC",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "float Receive_Slave_Data_NTC(void)",
+    "location": {
+      "column": "7",
+      "line": "24",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\1.MASTER\\user\\port.h"
+    },
+    "name": "Receive_Slave_Data_NTC",
     "origin": "user_include",
     "scope": null
   },

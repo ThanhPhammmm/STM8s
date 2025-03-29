@@ -156,6 +156,7 @@ void Get_Current_Time(RTC_Time_t *RTC_Time){
             RTC_Time->time_format = ALL_DAY_TYPE;
     }
     RTC_Time->hours = hours;
+    
     TimeToArray(RTC_Time);
 }
 

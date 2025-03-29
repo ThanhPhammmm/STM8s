@@ -104,15 +104,13 @@ uint8_t Wait_For_Ask_Data_Slave2_SensorNTC(){
 }
 
 void Send_Sensor_Data_LUX_Slave1() {
-  BH1750_Write(0x10);  // Start high-resolution continuous mode
-  float lux = BH1750_ReadLight();
-  uint8_t length = Message_Frame_Response_LUX(SLAVE_1, SENSOR_LUX, lux, requestData_LUX);
+
+  uint8_t length = Message_Frame_Response_LUX(SLAVE_1, SENSOR_LUX, lux_value, requestData_LUX);
   
   //UART_Send_Array(requestData_LUX, length);
   UART_Send_Array_IT(requestData_LUX, length);
 }
 void Send_Sensor_Data_RES_Slave1() {
-  uint16_t adc_value = Read_ADC(); // Read ADC value from PD2 (AIN3)
   uint8_t length = Message_Frame_Response_RES(SLAVE_1, SENSOR_RES, adc_value, requestData_RES);
   //UART_Send_Array(requestData_RES, length);
   UART_Send_Array_IT(requestData_RES, length);

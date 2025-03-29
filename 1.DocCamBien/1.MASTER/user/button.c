@@ -94,7 +94,7 @@ void Button_Run(typein_t *button_check)
             select = 1;
           }
       }
-                    Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
+      Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
 
       button_check->status_result = 0;
       button_check->flag_change = 0;
@@ -112,7 +112,7 @@ void Button_Run(typein_t *button_check)
           }
         }
       }
-                    Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
+        Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
 
         button_check->status_result = 0;
         button_check->flag_change = 0;
@@ -123,12 +123,13 @@ void Button_Run(typein_t *button_check)
       if(start_flag == 0){
         start_flag = 1;
       }
-                            Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
+      Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
 
-          button_check->status_result = 0;
-    button_check->flag_change = 0;
+      button_check->status_result = 0;
+      button_check->flag_change = 0;
     }
 
   }
+      //Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
 
 }

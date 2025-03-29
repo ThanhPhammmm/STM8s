@@ -37,6 +37,8 @@ uint8_t slave1_res = 1;
 volatile uint8_t slaveX_sensorX = slave1_sensorLux_WaitingSetPort;
 
 uint8_t receive_flag = 1;
+float lux_value = 0;
+uint16_t adc_value = 0;
 
 int main(void){
   CLK_HSI_16Mhz_config();
@@ -50,6 +52,10 @@ int main(void){
 //  GPIOB->CR1 |= (1 << 5);  // Push-pull mode
   
   while(1){
+    BH1750_Write(0x10);  // Start high-resolution continuous mode
+    lux_value = BH1750_ReadLight();
+    adc_value = Read_ADC(); // Read ADC value from PD2 (AIN3)
+
     //UART_Time_Out();
     switch (slaveX_sensorX) {
       
