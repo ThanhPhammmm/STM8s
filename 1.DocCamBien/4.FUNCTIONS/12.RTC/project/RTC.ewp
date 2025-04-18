@@ -1670,6 +1670,12 @@
             <name>$PROJ_DIR$\..\user\RTC.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\user\tim.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\user\tim.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\user\uart.c</name>
         </file>
         <file>

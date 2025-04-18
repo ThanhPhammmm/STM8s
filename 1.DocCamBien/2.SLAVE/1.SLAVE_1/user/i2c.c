@@ -29,7 +29,7 @@ void I2c_Init(void)
 
   while (!(I2C->CR1 & I2C_CR1_PE));  // Ensure the peripheral is ON
 
-  while (!(I2C->SR1 & I2C_SR1_SB));  // Wait for the start condition (optional)
+  //while (!(I2C->SR1 & I2C_SR1_SB));  // Wait for the start condition (optional)
 }
 
 void I2c_generate_start(){

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.11.1.207 for STM8                     26/Mar/2025  16:36:39
+# IAR ELF Linker V3.11.1.207 for STM8                     01/Apr/2025  22:03:53
 # Copyright 2010-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,12 +8,13 @@
 #    Map file     =  
 #        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\List\RTC.map
 #    Command line =  
-#        -f C:\Users\THANHP~1\AppData\Local\Temp\EW7D74.tmp
+#        -f C:\Users\THANHP~1\AppData\Local\Temp\EWA5B4.tmp
 #        (D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj\i2c.o
 #        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj\main.o
 #        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj\RTC.o
 #        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj\stm8s_i2c.o
 #        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj\stm8s_uart1.o
+#        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj\tim.o
 #        D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj\uart.o
 #        --redirect _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall
 #        --no_out_extension -o
@@ -133,53 +134,57 @@ No sections matched the following patterns:
     .intvec        const    0x008000   0x80  interrupt.o [4]
                           - 0x008080   0x80
 
-"P3-P5":                              0x889
+"P3-P5":                              0x908
   .near_func.text  ro code  0x008080   0xd1  stm8s_i2c.o [1]
   .near_func.text  ro code  0x008151   0x9e  stm8s_uart1.o [1]
   .near_func.text  ro code  0x0081ef   0x93  vreg_util.o [4]
   .near_func.text  ro code  0x008282   0x8a  RTC.o [1]
-  .near_func.text  ro code  0x00830c   0x7c  main.o [1]
-  .near_func.text  ro code  0x008388   0x79  RTC.o [1]
-  .near_func.text  ro code  0x008401   0x65  RTC.o [1]
-  .near.rodata     const    0x008466   0x58  stm8s_uart1.o [1]
-  .near.rodata     const    0x0084be   0x56  stm8s_i2c.o [1]
-  .near_func.text  ro code  0x008514   0x53  RTC.o [1]
-  .near_func.text  ro code  0x008567   0x52  RTC.o [1]
-  .near_func.text  ro code  0x0085b9   0x4d  uart.o [1]
-  .near_func.text  ro code  0x008606   0x46  stm8s_i2c.o [1]
-  .near_func.text  ro code  0x00864c   0x45  stm8s_i2c.o [1]
-  .near_func.text  ro code  0x008691   0x34  i2c.o [1]
-  .near_func.text  ro code  0x0086c5   0x33  uart.o [1]
-  .near_func.text  ro code  0x0086f8   0x2f  stm8s_i2c.o [1]
-  .near_func.text  ro code  0x008727   0x2f  stm8s_i2c.o [1]
-  .near_func.text  ro code  0x008756   0x2e  RTC.o [1]
-  .near_func.text  ro code  0x008784   0x2a  RTC.o [1]
-  .near_func.text  ro code  0x0087ae   0x26  uart.o [1]
-  .iar.init_table  const    0x0087d4    0x8  - Linker created -
-  .near_func.text  ro code  0x0087dc   0x1e  init_small.o [4]
-  .near_func.text  ro code  0x0087fa   0x1d  RTC.o [1]
-  .near_func.text  ro code  0x008817   0x1c  main.o [1]
-  .near_func.text  ro code  0x008833   0x16  RTC.o [1]
-  .near_func.text  ro code  0x008849   0x15  RTC.o [1]
-  .near_func.text  ro code  0x00885e   0x14  init.o [4]
-  .near_func.text  ro code  0x008872   0x14  __dbg_xxexit.o [3]
-  .near_func.text  ro code  0x008886   0x13  cstartup.o [4]
-  .near_func.text  ro code  0x008899   0x12  main.o [1]
-  .near.rodata     const    0x0088ab   0x11  main.o [1]
-  .near.rodata     const    0x0088bc   0x10  main.o [1]
-  .near_func.text  ro code  0x0088cc    0xe  RTC.o [1]
-  .near_func.text  ro code  0x0088da    0xb  uart.o [1]
-  .near_func.text  ro code  0x0088e5    0x9  uart.o [1]
-  .near_func.text  ro code  0x0088ee    0x5  cexit.o [4]
-  .near_func.text  ro code  0x0088f3    0x4  stm8s_i2c.o [1]
-  .near_func.text  ro code  0x0088f7    0x4  stm8s_i2c.o [1]
-  .near_func.text  ro code  0x0088fb    0x3  interrupt.o [4]
-  .near_func.text  ro code  0x0088fe    0x3  low_level_init.o [4]
-  .near_func.text  ro code  0x008901    0x3  exit.o [4]
-  .near_func.text  ro code  0x008904    0x3  unhandled_exception.o [4]
-  .near_func.text  ro code  0x008907    0x1  main.o [1]
-  .near_func.text  ro code  0x008908    0x1  __dbg_break.o [3]
-                          - 0x008909  0x889
+  .near_func.text  ro code  0x00830c   0x79  RTC.o [1]
+  .near_func.text  ro code  0x008385   0x65  RTC.o [1]
+  .near_func.text  ro code  0x0083ea   0x62  main.o [1]
+  .near.rodata     const    0x00844c   0x58  stm8s_uart1.o [1]
+  .near.rodata     const    0x0084a4   0x56  stm8s_i2c.o [1]
+  .near_func.text  ro code  0x0084fa   0x53  RTC.o [1]
+  .near_func.text  ro code  0x00854d   0x52  RTC.o [1]
+  .near_func.text  ro code  0x00859f   0x4d  uart.o [1]
+  .near_func.text  ro code  0x0085ec   0x46  stm8s_i2c.o [1]
+  .near_func.text  ro code  0x008632   0x45  stm8s_i2c.o [1]
+  .near_func.text  ro code  0x008677   0x42  main.o [1]
+  .near_func.text  ro code  0x0086b9   0x34  i2c.o [1]
+  .near_func.text  ro code  0x0086ed   0x33  tim.o [1]
+  .near_func.text  ro code  0x008720   0x33  uart.o [1]
+  .near_func.text  ro code  0x008753   0x2f  stm8s_i2c.o [1]
+  .near_func.text  ro code  0x008782   0x2f  stm8s_i2c.o [1]
+  .near_func.text  ro code  0x0087b1   0x2e  RTC.o [1]
+  .near_func.text  ro code  0x0087df   0x2a  RTC.o [1]
+  .near_func.text  ro code  0x008809   0x2a  tim.o [1]
+  .near_func.text  ro code  0x008833   0x26  uart.o [1]
+  .iar.init_table  const    0x008859    0x8  - Linker created -
+  .near_func.text  ro code  0x008861   0x1e  init_small.o [4]
+  .near_func.text  ro code  0x00887f   0x1d  RTC.o [1]
+  .near_func.text  ro code  0x00889c   0x16  RTC.o [1]
+  .near_func.text  ro code  0x0088b2   0x15  RTC.o [1]
+  .near_func.text  ro code  0x0088c7   0x14  init.o [4]
+  .near_func.text  ro code  0x0088db   0x14  __dbg_xxexit.o [3]
+  .near_func.text  ro code  0x0088ef   0x13  cstartup.o [4]
+  .near_func.text  ro code  0x008902   0x12  main.o [1]
+  .near.rodata     const    0x008914   0x11  main.o [1]
+  .near.rodata     const    0x008925   0x10  main.o [1]
+  .near_func.text  ro code  0x008935    0xe  RTC.o [1]
+  .near_func.text  ro code  0x008943    0xe  tim.o [1]
+  .near_func.text  ro code  0x008951    0xb  uart.o [1]
+  .near_func.text  ro code  0x00895c    0x9  uart.o [1]
+  .near_func.text  ro code  0x008965    0x8  short.o [4]
+  .near_func.text  ro code  0x00896d    0x5  cexit.o [4]
+  .near_func.text  ro code  0x008972    0x4  stm8s_i2c.o [1]
+  .near_func.text  ro code  0x008976    0x4  stm8s_i2c.o [1]
+  .near_func.text  ro code  0x00897a    0x3  interrupt.o [4]
+  .near_func.text  ro code  0x00897d    0x3  low_level_init.o [4]
+  .near_func.text  ro code  0x008980    0x3  exit.o [4]
+  .near_func.text  ro code  0x008983    0x3  unhandled_exception.o [4]
+  .near_func.text  ro code  0x008986    0x1  main.o [1]
+  .near_func.text  ro code  0x008987    0x1  __dbg_break.o [3]
+                          - 0x008988  0x908
 
 
 *******************************************************************************
@@ -203,12 +208,13 @@ Zero (__iar_zero_init2)
 D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj: [1]
     RTC.o                      699
     i2c.o                       52
-    main.o                     171       33       15
+    main.o                     183       33       15
     stm8s_i2c.o                450       86
     stm8s_uart1.o              158       88
+    tim.o                      107
     uart.o                     186                22
     ------------------------------------------------
-    Total:                   1 716      207       37
+    Total:                   1 835      207       37
 
 command line: [2]
     ------------------------------------------------
@@ -228,15 +234,16 @@ dlstm8smn.a: [4]
     init_small.o                30
     interrupt.o                  3      128
     low_level_init.o             3
+    short.o                      8
     unhandled_exception.o        3
     vreg_util.o                147
     vregs.o                                       16
     ------------------------------------------------
-    Total:                     233      128       16
+    Total:                     241      128       16
 
     Linker created                        8      256
 ----------------------------------------------------
-    Grand Total:             1 970      343      309
+    Grand Total:             2 097      343      309
 
 
 *******************************************************************************
@@ -245,8 +252,8 @@ dlstm8smn.a: [4]
 
 Entry                    Address  Size  Type      Object
 -----                    -------  ----  ----      ------
-.iar.init_table$$Base   0x0087d4         --   Gb  - Linker created -
-.iar.init_table$$Limit  0x0087dc         --   Gb  - Linker created -
+.iar.init_table$$Base   0x008859         --   Gb  - Linker created -
+.iar.init_table$$Limit  0x008861         --   Gb  - Linker created -
 ?b0                     0x000000        Data  Gb  vregs.o [4]
 ?b1                     0x000001        Data  Gb  vregs.o [4]
 ?b10                    0x00000a        Data  Gb  vregs.o [4]
@@ -283,6 +290,7 @@ Entry                    Address  Size  Type      Object
 ?push_l2                0x00822c        Code  Gb  vreg_util.o [4]
 ?push_w4                0x0081ef        Code  Gb  vreg_util.o [4]
 ?push_w6                0x0081f4        Code  Gb  vreg_util.o [4]
+?sll16_x_x_a            0x008965        Code  Gb  short.o [4]
 ?w0                     0x000000        Data  Gb  vregs.o [4]
 ?w1                     0x000002        Data  Gb  vregs.o [4]
 ?w2                     0x000004        Data  Gb  vregs.o [4]
@@ -291,58 +299,63 @@ Entry                    Address  Size  Type      Object
 ?w5                     0x00000a        Data  Gb  vregs.o [4]
 ?w6                     0x00000c        Data  Gb  vregs.o [4]
 ?w7                     0x00000e        Data  Gb  vregs.o [4]
-Bcd_To_Binary           0x008833  0x16  Code  Lc  RTC.o [1]
-Binary_To_Bcd           0x008784  0x2a  Code  Lc  RTC.o [1]
-CLK_HSI_16Mhz_config    0x008899  0x12  Code  Gb  main.o [1]
+Bcd_To_Binary           0x00889c  0x16  Code  Lc  RTC.o [1]
+Binary_To_Bcd           0x0087df  0x2a  Code  Lc  RTC.o [1]
+CLK_HSI_16Mhz_config    0x008902  0x12  Code  Gb  main.o [1]
 CSTACK$$Base            0x000300         --   Gb  - Linker created -
 CSTACK$$Limit           0x000400         --   Gb  - Linker created -
-DS1307_Init             0x0088cc   0xe  Code  Gb  RTC.o [1]
-DS1307_read             0x008388  0x79  Code  Gb  RTC.o [1]
-DS1307_write            0x008514  0x53  Code  Gb  RTC.o [1]
-DateToArray             0x0087fa  0x1d  Code  Gb  RTC.o [1]
-Get_Current_Date        0x008756  0x2e  Code  Gb  RTC.o [1]
-Get_Current_Time        0x008401  0x65  Code  Gb  RTC.o [1]
-I2C_AcknowledgeConfig   0x00864c  0x45  Code  Gb  stm8s_i2c.o [1]
+DS1307_Init             0x008935   0xe  Code  Gb  RTC.o [1]
+DS1307_read             0x00830c  0x79  Code  Gb  RTC.o [1]
+DS1307_write            0x0084fa  0x53  Code  Gb  RTC.o [1]
+DateToArray             0x00887f  0x1d  Code  Gb  RTC.o [1]
+Get_Current_Date        0x0087b1  0x2e  Code  Gb  RTC.o [1]
+Get_Current_Time        0x008385  0x65  Code  Gb  RTC.o [1]
+I2C_AcknowledgeConfig   0x008632  0x45  Code  Gb  stm8s_i2c.o [1]
 I2C_CheckEvent          0x008080  0xd1  Code  Gb  stm8s_i2c.o [1]
-I2C_GenerateSTART       0x0086f8  0x2f  Code  Gb  stm8s_i2c.o [1]
-I2C_GenerateSTOP        0x008727  0x2f  Code  Gb  stm8s_i2c.o [1]
-I2C_ReceiveData         0x0088f3   0x4  Code  Gb  stm8s_i2c.o [1]
-I2C_Send7bitAddress     0x008606  0x46  Code  Gb  stm8s_i2c.o [1]
-I2C_SendData            0x0088f7   0x4  Code  Gb  stm8s_i2c.o [1]
-I2c_Init                0x008691  0x34  Code  Gb  i2c.o [1]
+I2C_GenerateSTART       0x008753  0x2f  Code  Gb  stm8s_i2c.o [1]
+I2C_GenerateSTOP        0x008782  0x2f  Code  Gb  stm8s_i2c.o [1]
+I2C_ReceiveData         0x008972   0x4  Code  Gb  stm8s_i2c.o [1]
+I2C_Send7bitAddress     0x0085ec  0x46  Code  Gb  stm8s_i2c.o [1]
+I2C_SendData            0x008976   0x4  Code  Gb  stm8s_i2c.o [1]
+I2c_Init                0x0086b9  0x34  Code  Gb  i2c.o [1]
 INTVEC$$Base            0x008000         --   Gb  - Linker created -
 INTVEC$$Limit           0x008080         --   Gb  - Linker created -
 RTC_buffer              0x000024   0x7  Data  Gb  main.o [1]
-Region$$Table$$Base     0x0087d4         --   Gb  - Linker created -
-Region$$Table$$Limit    0x0087dc         --   Gb  - Linker created -
-Set_Current_Date        0x008567  0x52  Code  Gb  RTC.o [1]
+Region$$Table$$Base     0x008859         --   Gb  - Linker created -
+Region$$Table$$Limit    0x008861         --   Gb  - Linker created -
+Set_Current_Date        0x00854d  0x52  Code  Gb  RTC.o [1]
 Set_Current_Time        0x008282  0x8a  Code  Gb  RTC.o [1]
-TimeToArray             0x008849  0x15  Code  Gb  RTC.o [1]
+TIM1_BaseInit           0x0086ed  0x33  Code  Gb  tim.o [1]
+TIM1_CLEAR_IT_PENDING   0x008943   0xe  Code  Gb  tim.o [1]
+TIM1_IT_Config          0x008809  0x2a  Code  Gb  tim.o [1]
+TIM1_UPD_OVF_IRQHandler
+                        0x008677  0x42  Code  Gb  main.o [1]
+TimeToArray             0x0088b2  0x15  Code  Gb  RTC.o [1]
 UART1_GetFlagStatus     0x008151  0x9e  Code  Gb  stm8s_uart1.o [1]
-UART1_RX_IRQHandler     0x0087ae  0x26  Code  Gb  uart.o [1]
-UART1_Send_Char         0x0088e5   0x9  Code  Gb  uart.o [1]
-UART1_Send_String       0x0088da   0xb  Code  Gb  uart.o [1]
-UART_Configuration      0x0085b9  0x4d  Code  Gb  uart.o [1]
-UART_Send_Array         0x0086c5  0x33  Code  Gb  uart.o [1]
-__DebugBreak            0x008908   0x1  Code  Gb  __dbg_break.o [3]
-__exit                  0x008872  0x14  Code  Gb  __dbg_xxexit.o [3]
-__iar_data_init2        0x00885e  0x14  Code  Gb  init.o [4]
-__iar_program_start     0x008886        Code  Gb  cstartup.o [4]
+UART1_RX_IRQHandler     0x008833  0x26  Code  Gb  uart.o [1]
+UART1_Send_Char         0x00895c   0x9  Code  Gb  uart.o [1]
+UART1_Send_String       0x008951   0xb  Code  Gb  uart.o [1]
+UART_Configuration      0x00859f  0x4d  Code  Gb  uart.o [1]
+UART_Send_Array         0x008720  0x33  Code  Gb  uart.o [1]
+__DebugBreak            0x008987   0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x0088db  0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_data_init2        0x0088c7  0x14  Code  Gb  init.o [4]
+__iar_program_start     0x0088ef        Code  Gb  cstartup.o [4]
 __iar_unhandled_exception
-                        0x008904        Code  Gb  unhandled_exception.o [4]
-__iar_zero_init2        0x0087dc        Code  Gb  init_small.o [4]
+                        0x008983        Code  Gb  unhandled_exception.o [4]
+__iar_zero_init2        0x008861        Code  Gb  init_small.o [4]
 __intvec                0x008000        Data  Gb  interrupt.o [4]
-__low_level_init        0x0088fe   0x3  Code  Gb  low_level_init.o [4]
-_exit                   0x0088ee        Code  Gb  cexit.o [4]
-_interrupt_20           0x0087ae        Code  Gb  uart.o [1]
+__low_level_init        0x00897d   0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x00896d        Code  Gb  cexit.o [4]
+_interrupt_13           0x008677        Code  Gb  main.o [1]
+_interrupt_20           0x008833        Code  Gb  uart.o [1]
 array_receive           0x000010  0x14  Data  Gb  uart.o [1]
-assert_failed           0x008907   0x1  Code  Gb  main.o [1]
+assert_failed           0x008986   0x1  Code  Gb  main.o [1]
 count_array_receive     0x000033   0x2  Data  Gb  uart.o [1]
 current_date            0x00002f   0x4  Data  Gb  main.o [1]
 current_time            0x00002b   0x4  Data  Gb  main.o [1]
-delay_ms                0x008817  0x1c  Code  Gb  main.o [1]
-exit                    0x008901   0x3  Code  Gb  exit.o [4]
-main                    0x00830c  0x7c  Code  Gb  main.o [1]
+exit                    0x008980   0x3  Code  Gb  exit.o [4]
+main                    0x0083ea  0x62  Code  Gb  main.o [1]
 
 
 [1] = D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\4.FUNCTIONS\12.RTC\project\Debug\Obj
@@ -350,7 +363,7 @@ main                    0x00830c  0x7c  Code  Gb  main.o [1]
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a
 
-  1 970 bytes of readonly  code memory
+  2 097 bytes of readonly  code memory
     343 bytes of readonly  data memory
     309 bytes of readwrite data memory
 

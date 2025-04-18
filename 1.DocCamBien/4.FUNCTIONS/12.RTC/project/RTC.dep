@@ -1,124 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>3385669850</fileChecksum>
+    <fileChecksum>337501946</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-            <file>$PROJ_DIR$\Debug\Exe\RTC.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\RTC.pbd</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\uart.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\uart.o</file>
-            <file>$PROJ_DIR$\..\user\i2c.h</file>
-            <file>$PROJ_DIR$\..\library\src\stm8s_uart1.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm8s_uart1.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm8s_uart1.o</file>
-            <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
-            <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-            <file>$PROJ_DIR$\..\user\uart.c</file>
-            <file>$PROJ_DIR$\Debug\List\RTC.map</file>
-            <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-            <file>$PROJ_DIR$\..\user\uart.h</file>
-            <file>$PROJ_DIR$\..\..\..\3.PERIPHERAL\3.I2C\user\i2c.c</file>
-            <file>$PROJ_DIR$\..\..\..\3.PERIPHERAL\3.I2C\user\i2c.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\RTC.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\RTC.xcl</file>
-            <file>$PROJ_DIR$\..\library\src\stm8s_i2c.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm8s_i2c.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm8s_i2c.xcl</file>
-            <file>$PROJ_DIR$\..\user\main.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\i2c.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\i2c.xcl</file>
             <file>$PROJ_DIR$\..\library\stm8s_conf.h</file>
+            <file>$PROJ_DIR$\..\..\..\3.PERIPHERAL\3.I2C\user\i2c.c</file>
+            <file>$PROJ_DIR$\..\user\uart.c</file>
+            <file>$PROJ_DIR$\..\library\src\stm8s_uart1.c</file>
             <file>$PROJ_DIR$\..\library\STM8CONFIG.h</file>
+            <file>$PROJ_DIR$\..\user\RTC.c</file>
             <file>$PROJ_DIR$\..\user\RTC.h</file>
-            <file>$PROJ_DIR$\..\library\inc\stm8s_beep.h</file>
-            <file>$PROJ_DIR$\..\library\inc\stm8s_iwdg.h</file>
+            <file>$PROJ_DIR$\..\user\uart.h</file>
+            <file>$PROJ_DIR$\..\library\src\stm8s_i2c.c</file>
+            <file>$PROJ_DIR$\..\..\..\3.PERIPHERAL\3.I2C\user\i2c.h</file>
+            <file>$PROJ_DIR$\..\user\main.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+            <file>$PROJ_DIR$\Debug\Exe\RTC.out</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_tim1.h</file>
+            <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm8s_i2c.xcl</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_adc1.h</file>
-            <file>$PROJ_DIR$\..\library\inc\stm8s_awu.h</file>
+            <file>$PROJ_DIR$\..\library\inc\stm8s_tim2.h</file>
+            <file>$PROJ_DIR$\..\library\inc\stm8s_rst.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\uart.xcl</file>
+            <file>$PROJ_DIR$\..\library\inc\stm8s_beep.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\RTC.xcl</file>
+            <file>$PROJ_DIR$\..\library\inc\stm8s_iwdg.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\i2c.o</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_gpio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\RTC.pbd</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm8s_uart1.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\uart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm8s_i2c.o</file>
+            <file>$PROJ_DIR$\..\user\i2c.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm8s_uart1.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\RTC.map</file>
+            <file>$PROJ_DIR$\..\library\inc\stm8s_awu.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\RTC.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\i2c.xcl</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_i2c.h</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_conf.h</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_exti.h</file>
-            <file>$PROJ_DIR$\..\library\inc\stm8s_flash.h</file>
+            <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_tim4.h</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_uart1.h</file>
-            <file>$PROJ_DIR$\..\library\inc\stm8s_tim2.h</file>
-            <file>$PROJ_DIR$\..\library\inc\stm8s_rst.h</file>
-            <file>$PROJ_DIR$\..\library\inc\stm8s.h</file>
+            <file>$PROJ_DIR$\..\library\inc\stm8s_flash.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\..\library\inc\stm8s_itc.h</file>
             <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_spi.h</file>
-            <file>$PROJ_DIR$\..\library\inc\stm8s_itc.h</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_clk.h</file>
+            <file>$PROJ_DIR$\..\library\inc\stm8s.h</file>
             <file>$PROJ_DIR$\..\library\inc\stm8s_wwdg.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-            <file>$PROJ_DIR$\..\user\RTC.c</file>
+            <file>$PROJ_DIR$\..\user\tim.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\tim.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\tim.xcl</file>
+            <file>$PROJ_DIR$\..\user\tim.h</file>
         </outputs>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\RTC.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 13</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 10 24 0 18 21 9 5 14 11</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 1 13</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\library\src\stm8s_uart1.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 9</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 8</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 40 43 36 32 33 29 47 37 38 34 35 46 30 42 45 31 41 39 48 44</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\user\uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 5</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 4</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 15 40 43 36 32 33 29 47 37 38 34 35 46 30 42 45 31 41 39 48 44</file>
-                </tool>
-            </inputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\3.PERIPHERAL\3.I2C\user\i2c.c</name>
             <outputs>
@@ -128,22 +70,60 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 25</file>
+                    <file> 36</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 6 43 36 32 33 29 47 37 38 34 35 46 30 42 45 31 41 39 40 48 44</file>
+                    <file> 30 49 38 17 33 21 48 39 43 25 37 45 23 19 47 14 18 41 42 50 46</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\library\src\stm8s_i2c.c</name>
+            <name>$PROJ_DIR$\..\user\uart.c</name>
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 21</file>
+                    <file> 28</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 20</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 7 42 49 38 17 33 21 48 39 43 25 37 45 23 19 47 14 18 41 50 46</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\library\src\stm8s_uart1.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 27</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 42 49 38 17 33 21 48 39 43 25 37 45 23 19 47 14 18 41 50 46</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\user\RTC.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 35</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -153,7 +133,26 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 35 43 36 32 33 29 47 37 38 34 46 30 42 45 31 41 39 40 48 44</file>
+                    <file> 6 49 38 17 33 21 48 39 43 25 37 45 23 19 47 14 18 41 42 50 46</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\library\src\stm8s_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 29</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 16</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 37 49 38 17 33 21 48 39 43 25 45 23 19 47 14 18 41 42 50 46</file>
                 </tool>
             </inputs>
         </file>
@@ -161,41 +160,65 @@
             <name>$PROJ_DIR$\..\user\main.c</name>
             <outputs>
                 <tool>
-                    <name>__cstat</name>
-                    <file> 49</file>
-                </tool>
-                <tool>
                     <name>ICCSTM8</name>
-                    <file> 0</file>
+                    <file> 11</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 3</file>
+                    <file> 34</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 44</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 15 40 43 36 32 33 29 47 37 38 34 35 46 30 42 45 31 41 39 48 44 28 6</file>
+                    <file> 7 42 49 38 17 33 21 48 39 43 25 37 45 23 19 47 14 18 41 50 46 6 30 54</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\user\RTC.c</name>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 13 32</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\RTC.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 15 24 11 35 29 27 52 28 12 40</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\user\tim.c</name>
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 18</file>
+                    <file> 52</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 19</file>
+                    <file> 53</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 28 43 36 32 33 29 47 37 38 34 35 46 30 42 45 31 41 39 40 48 44</file>
+                    <file> 54 49 38 17 33 21 48 39 43 25 37 45 23 19 47 14 18 41 42 50 46</file>
                 </tool>
             </inputs>
         </file>

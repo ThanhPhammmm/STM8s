@@ -69,66 +69,70 @@ void Button_Run(typein_t *button_check)
 {
   uint8_t state = Gpio_Read_Input_Port_A(button_check->pin);
   Button_ReadInput(state, button_check);
-
-  if (button_check->status_result == 1) // nhan 1 lan
-  {
-    if (button_check->flag_change == 1) // co bat khi khac trang thai truoc do
+  switch(button_check->status_result){
+    case 1: // nhan 1 lan
     {
-      if(button_check->pin == 3){//enter
-        if(start_flag == 1){
-          if(select == 1){
-            if(currentMenu->followingMenu1 != NULL){
-              currentMenu = currentMenu -> followingMenu1;
+      if (button_check->flag_change == 1) // co bat khi khac trang thai truoc do
+      {
+        if(button_check->pin == 3){//enter
+          if(start_flag == 1){
+            if(select == 1){
+              if(currentMenu->followingMenu1 != NULL){
+                currentMenu = currentMenu -> followingMenu1;
+              }
             }
-          }
-          else if(select == 2){
-            if(currentMenu->followingMenu2 != NULL){
-              currentMenu = currentMenu -> followingMenu2;
+            else if(select == 2){
+              if(currentMenu->followingMenu2 != NULL){
+                currentMenu = currentMenu -> followingMenu2;
+              }
             }
           }
         }
-      }
-      else if(button_check->pin == 2){//select
-          select = select + 1;
-          if(select == 3){
-            select = 1;
-          }
-      }
-      Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
-
-      button_check->status_result = 0;
-      button_check->flag_change = 0;
-    }
-  }
-  else if (button_check->status_result == 2)
-  {
-    if (button_check->flag_change == 1)
-    {
-      if(button_check->pin == 2){
-        if(currentMenu->previousMenu != NULL){
-          currentMenu = currentMenu->previousMenu;
-          if(currentMenu == &MainMenu){
-            select = 1;
-          }
+        else if(button_check->pin == 2){//select
+            select = select + 1;
+            if(select == 3){
+              select = 1;
+            }
         }
-      }
         Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
 
         button_check->status_result = 0;
         button_check->flag_change = 0;
-    }
-  }
-  else if(button_check->status_result == 10){
-    if(button_check->pin == 3){//up
-      if(start_flag == 0){
-        start_flag = 1;
       }
-      Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
-
-      button_check->status_result = 0;
-      button_check->flag_change = 0;
+      break;
     }
+    case 2:
+    {
+      if (button_check->flag_change == 1)
+      {
+        if(button_check->pin == 2){
+          if(currentMenu->previousMenu != NULL){
+            currentMenu = currentMenu->previousMenu;
+            if(currentMenu == &MainMenu){
+              select = 1;
+            }
+          }
+        }
+          Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
 
+          button_check->status_result = 0;
+          button_check->flag_change = 0;
+      }
+      break;
+    }
+    case 10:
+    {
+      if(button_check->pin == 3){//up
+        if(start_flag == 0){
+          start_flag = 1;
+        }
+        Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
+
+        button_check->status_result = 0;
+        button_check->flag_change = 0;
+      }
+      break;
+    }
   }
       //Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
 

@@ -1,6 +1,7 @@
 #include <uart.h>
 #include <RTC.h>
 #include <i2c.h>
+#include <tim.h>
 
 uint8_t RTC_buffer[7];
 void delay_ms(uint16_t ms) {
@@ -10,6 +11,26 @@ void delay_ms(uint16_t ms) {
         }
     }
 }
+RTC_Time_t current_time;
+RTC_Date_t current_date;
+
+INTERRUPT_HANDLER(TIM1_UPD_OVF_IRQHandler, 11)
+{  
+  if (TIM1->SR1 & (1 << 0)) {  // Check UIF flag (bit 0)
+    TIM1->SR1 &= ~(1 << 0);  // Clear UIF flag
+
+    // Handle button press or other actions
+
+    TIM1_CLEAR_IT_PENDING(UPDATE_EVENT);
+    Get_Current_Time(&current_time);
+    Get_Current_Date(&current_date);
+
+    TimeToArray(&current_time);
+    DateToArray(&current_date);
+
+    UART_Send_Array(RTC_buffer, 7);
+  }
+}
 void CLK_HSI_16Mhz_config(void) {
     CLK->ICKR |= (1 << 1);   
     while (!(CLK->ICKR & (1 << 0))); 
@@ -17,15 +38,11 @@ void CLK_HSI_16Mhz_config(void) {
     CLK->CKDIVR = 0x00;
 }
 void assert_failed(uint8_t* file, uint32_t line){}
-
-RTC_Time_t current_time;
-RTC_Date_t current_date;
   
 int main(){
   CLK_HSI_16Mhz_config();
   I2c_Init();
   UART_Configuration(9600);
-  
   if(DS1307_Init()){
     UART1_Send_String("DS1307 is ready");
   }
@@ -45,15 +62,10 @@ int main(){
 
   Set_Current_Time(&current_time);
   Set_Current_Date(&current_date);
-  
+  TIM1_BaseInit(15999, COUNT_UP, 1000 - 1, 0);
+enableInterrupts();
+
   while(1){
-    Get_Current_Time(&current_time);
-    Get_Current_Date(&current_date);
-    
-    TimeToArray(&current_time);
-    DateToArray(&current_date);
-    
-    UART_Send_Array(RTC_buffer, 7);
-    delay_ms(1000);
+
   }
 }

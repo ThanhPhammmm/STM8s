@@ -141,6 +141,9 @@ void Send_Sensor_Data_RES_Slave1() {
 //}
 
 void Send_Sensor_Data_RTC_Slave2(){
+  Get_Current_Time(&current_time);
+  Get_Current_Date(&current_date);
+  
   uint8_t length = Message_Frame_Response_RTC(SLAVE_2, SENSOR_RTC, RTC_buffer, requestData_RTC);
   //UART_Send_Array(requestData_RTC, length);
   UART_Send_Array_IT(requestData_RTC, length);

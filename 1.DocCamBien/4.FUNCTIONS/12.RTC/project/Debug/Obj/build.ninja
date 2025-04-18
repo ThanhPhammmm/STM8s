@@ -25,10 +25,11 @@ build stm8s_uart1.pbi : index stm8s_uart1.xcl
 build i2c.pbi : index i2c.xcl
 build main.pbi : index main.xcl
 build RTC.pbi : index RTC.xcl
+build tim.pbi : index tim.xcl
 build uart.pbi : index uart.xcl
-build RTC_part0.pbi : link stm8s_i2c.pbi stm8s_uart1.pbi
-build RTC_part1.pbi : link i2c.pbi main.pbi
-build RTC_part2.pbi : link RTC.pbi uart.pbi
+build RTC_part0.pbi : link stm8s_i2c.pbi stm8s_uart1.pbi i2c.pbi
+build RTC_part1.pbi : link main.pbi RTC.pbi tim.pbi
+build RTC_part2.pbi : link uart.pbi
 build RTC.pbd : link RTC_part0.pbi RTC_part1.pbi RTC_part2.pbi
 build RTC.pbw : browsedata RTC.pbd
 

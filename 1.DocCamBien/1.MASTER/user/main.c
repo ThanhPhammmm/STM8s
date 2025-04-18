@@ -12,35 +12,9 @@ void assert_failed(uint8_t *file, uint32_t line) {}
 
 frame_Message_t detected_frame;
 
-extern uint8_t array_receive[20];
-
 typein_t ButtonA1 = {.status_old = 1, .pin = 1};
 typein_t ButtonA2 = {.status_old = 1, .pin = 2};
 typein_t ButtonA3 = {.status_old = 1, .pin = 3};
-
-//SLAVE1_LUX
-#define Sending_SetSlave_to_slave1_sensorLux             0
-#define Waiting_ConfirmSlave_from_slave1_sensorLux       1
-#define Sending_AskData_to_slave1_sensorLux             2
-#define Waiting_RespondData_from_slave1_sensorLux       3
-
-//SLAVE2_RES
-#define Sending_SetSlave_to_slave1_sensorRES             4
-#define Waiting_ConfirmSlave_from_slave1_sensorRES       5
-#define Sending_AskData_to_slave1_sensorRES             6
-#define Waiting_RespondData_from_slave1_sensorRES       7
-
-//SLAVE2_RTC
-#define Sending_SetSlave_to_slave2_sensorRTC             8
-#define Waiting_ConfirmSlave_from_slave2_sensorRTC       9
-#define Sending_AskData_to_slave2_sensorRTC             10
-#define Waiting_RespondData_from_slave2_sensorRTC       11
-
-//SLAVE2_NTC
-#define Sending_SetSlave_to_slave2_sensorNTC             12
-#define Waiting_ConfirmSlave_from_slave2_sensorNTC       13
-#define Sending_AskData_to_slave2_sensorNTC             14
-#define Waiting_RespondData_from_slave2_sensorNTC       15
 
 float data_sensor1 = 0;
 uint16_t data_sensor2 = 0;
@@ -81,6 +55,7 @@ INTERRUPT_HANDLER(TIM1_UPD_OVF_IRQHandler, 11)
 //{
 //    Send_Data_To_LCD(data_sensor1, data_sensor2, data_sensor3, data_sensor4);
 //    TIM2_CLEAR_IT_PENDING(UPDATE_EVENT);
+//    
 //}
 int main(void){
   CLK_HSI_16Mhz_config();
@@ -105,9 +80,12 @@ int main(void){
   
   Button_Init();
   
-  TIM1_BaseInit(0, COUNT_UP, 1, 0);  // Smallest possible time
-  //TIM2_BaseInit(15999, COUNT_UP, 800 - 1);
-  volatile uint8_t Master_works_with_slaveX_sensorX = Sending_SetSlave_to_slave1_sensorLux;
+// TIM1 for Button Press Handling (every 10ms)
+  TIM1_BaseInit(0, COUNT_UP, 1, 0);  // 10ms interval
+
+// TIM2 for LCD Display Update (every 1 second)
+  //TIM2_BaseInit(15999, COUNT_UP, 1000 - 1); // 1 second interval
+  volatile slave_state_e Master_works_with_slaveX_sensorX = Sending_SetSlave_to_slave1_sensorLux;
   
   while(1){
     if (button_flag)

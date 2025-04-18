@@ -50946,7 +50946,7 @@
     "display": "slave1_lux",
     "location": {
       "column": "9",
-      "line": "34",
+      "line": "33",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\main.c"
     },
     "name": "slave1_lux",
@@ -50960,7 +50960,7 @@
     "display": "slave1_res",
     "location": {
       "column": "9",
-      "line": "35",
+      "line": "34",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\main.c"
     },
     "name": "slave1_res",
@@ -50974,7 +50974,7 @@
     "display": "slaveX_sensorX",
     "location": {
       "column": "18",
-      "line": "37",
+      "line": "36",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\main.c"
     },
     "name": "slaveX_sensorX",
@@ -50988,7 +50988,7 @@
     "display": "receive_flag",
     "location": {
       "column": "9",
-      "line": "39",
+      "line": "38",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\main.c"
     },
     "name": "receive_flag",
@@ -51002,7 +51002,7 @@
     "display": "lux_value",
     "location": {
       "column": "7",
-      "line": "40",
+      "line": "39",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\main.c"
     },
     "name": "lux_value",
@@ -51016,7 +51016,7 @@
     "display": "adc_value",
     "location": {
       "column": "10",
-      "line": "41",
+      "line": "40",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\main.c"
     },
     "name": "adc_value",
@@ -51030,7 +51030,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "43",
+      "line": "42",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\main.c"
     },
     "name": "main",
@@ -51038,7 +51038,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3230@F@main@type_message",
+    "ID": "c:main.c@3251@F@main@type_message",
     "What": "Variable",
     "defdec": "Def",
     "display": "type_message",
@@ -51052,7 +51052,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5282@F@main@type_message",
+    "ID": "c:main.c@5303@F@main@type_message",
     "What": "Variable",
     "defdec": "Def",
     "display": "type_message",
@@ -52424,7 +52424,7 @@
     "scope": null
   },
   {
-    "ID": "c:i2c.c@1082@F@Get_flag_status_of_bus@tmp",
+    "ID": "c:i2c.c@1084@F@Get_flag_status_of_bus@tmp",
     "What": "Variable",
     "defdec": "Def",
     "display": "tmp",
@@ -53432,58 +53432,170 @@
     "scope": null
   },
   {
-    "ID": "c:@F@ADC_Init",
+    "ID": "c:@select",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "select",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "select",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@MainMenu",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "MainMenu",
+    "location": {
+      "column": "8",
+      "line": "5",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "MainMenu",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SLAVE1_MENU",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "SLAVE1_MENU",
+    "location": {
+      "column": "8",
+      "line": "6",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "SLAVE1_MENU",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SLAVE2_MENU",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "SLAVE2_MENU",
+    "location": {
+      "column": "8",
+      "line": "7",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "SLAVE2_MENU",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@RTC",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "RTC",
+    "location": {
+      "column": "8",
+      "line": "8",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "RTC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@RTC",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "RTC",
+    "location": {
+      "column": "8",
+      "line": "10",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "RTC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SLAVE2_MENU",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "SLAVE2_MENU",
+    "location": {
+      "column": "8",
+      "line": "17",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "SLAVE2_MENU",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SLAVE1_MENU",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "SLAVE1_MENU",
+    "location": {
+      "column": "8",
+      "line": "24",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "SLAVE1_MENU",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@MainMenu",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "MainMenu",
+    "location": {
+      "column": "8",
+      "line": "31",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "MainMenu",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@currentMenu",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "currentMenu",
+    "location": {
+      "column": "9",
+      "line": "39",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+    },
+    "name": "currentMenu",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Menu_Display_Select",
     "What": "Function",
     "defdec": "Def",
-    "display": "void ADC_Init(void)",
+    "display": "void Menu_Display_Select(Menu_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "3",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\RES.c"
+      "line": "41",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
     },
-    "name": "ADC_Init",
+    "name": "Menu_Display_Select",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@Read_ADC",
+    "ID": "c:@F@Send_Data_To_LCD",
     "What": "Function",
     "defdec": "Def",
-    "display": "uint16_t Read_ADC(void)",
+    "display": "void Send_Data_To_LCD(float, uint16_t, uint8_t *, float)",
     "location": {
-      "column": "10",
-      "line": "9",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\RES.c"
+      "column": "6",
+      "line": "58",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
     },
-    "name": "Read_ADC",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:RES.c@428@F@Read_ADC@high",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "high",
-    "location": {
-      "column": "13",
-      "line": "14",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\RES.c"
-    },
-    "name": "high",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:RES.c@484@F@Read_ADC@low",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "low",
-    "location": {
-      "column": "13",
-      "line": "15",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\RES.c"
-    },
-    "name": "low",
+    "name": "Send_Data_To_LCD",
     "origin": "project_file",
     "scope": null
   },
@@ -54062,13 +54174,13 @@
     "scope": null
   },
   {
-    "ID": "c:slaved_port.c@3729@F@Send_Sensor_Data_LUX_Slave1@length",
+    "ID": "c:slaved_port.c@3831@F@Send_Sensor_Data_LUX_Slave1@length",
     "What": "Variable",
     "defdec": "Def",
     "display": "length",
     "location": {
       "column": "11",
-      "line": "108",
+      "line": "110",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "length",
@@ -54082,7 +54194,7 @@
     "display": "void Send_Sensor_Data_RES_Slave1(void)",
     "location": {
       "column": "6",
-      "line": "113",
+      "line": "115",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "Send_Sensor_Data_RES_Slave1",
@@ -54090,13 +54202,13 @@
     "scope": null
   },
   {
-    "ID": "c:slaved_port.c@3966@F@Send_Sensor_Data_RES_Slave1@length",
+    "ID": "c:slaved_port.c@4129@F@Send_Sensor_Data_RES_Slave1@length",
     "What": "Variable",
     "defdec": "Def",
     "display": "length",
     "location": {
       "column": "11",
-      "line": "114",
+      "line": "117",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "length",
@@ -54110,7 +54222,7 @@
     "display": "void Send_Sensor_Data_RTC_Slave2(void)",
     "location": {
       "column": "6",
-      "line": "140",
+      "line": "143",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "Send_Sensor_Data_RTC_Slave2",
@@ -54118,13 +54230,13 @@
     "scope": null
   },
   {
-    "ID": "c:slaved_port.c@4865@F@Send_Sensor_Data_RTC_Slave2@length",
+    "ID": "c:slaved_port.c@5028@F@Send_Sensor_Data_RTC_Slave2@length",
     "What": "Variable",
     "defdec": "Def",
     "display": "length",
     "location": {
       "column": "11",
-      "line": "141",
+      "line": "144",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "length",
@@ -54132,13 +54244,13 @@
     "scope": null
   },
   {
-    "ID": "c:slaved_port.c@5488@F@Send_Sensor_Data_RTC_Slave2@month",
+    "ID": "c:slaved_port.c@5651@F@Send_Sensor_Data_RTC_Slave2@month",
     "What": "Variable",
     "defdec": "Def",
     "display": "month",
     "location": {
       "column": "23",
-      "line": "157",
+      "line": "160",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "month",
@@ -54146,13 +54258,13 @@
     "scope": null
   },
   {
-    "ID": "c:slaved_port.c@5539@F@Send_Sensor_Data_RTC_Slave2@year",
+    "ID": "c:slaved_port.c@5702@F@Send_Sensor_Data_RTC_Slave2@year",
     "What": "Variable",
     "defdec": "Def",
     "display": "year",
     "location": {
       "column": "23",
-      "line": "158",
+      "line": "161",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "year",
@@ -54160,13 +54272,13 @@
     "scope": null
   },
   {
-    "ID": "c:slaved_port.c@5718@F@Send_Sensor_Data_RTC_Slave2@days_in_month",
+    "ID": "c:slaved_port.c@5881@F@Send_Sensor_Data_RTC_Slave2@days_in_month",
     "What": "Variable",
     "defdec": "Def",
     "display": "days_in_month",
     "location": {
       "column": "23",
-      "line": "161",
+      "line": "164",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "days_in_month",
@@ -54180,7 +54292,7 @@
     "display": "void Send_Sensor_Data_NTC_Slave2(void)",
     "location": {
       "column": "6",
-      "line": "180",
+      "line": "183",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "Send_Sensor_Data_NTC_Slave2",
@@ -54188,13 +54300,13 @@
     "scope": null
   },
   {
-    "ID": "c:slaved_port.c@6517@F@Send_Sensor_Data_NTC_Slave2@length",
+    "ID": "c:slaved_port.c@6680@F@Send_Sensor_Data_NTC_Slave2@length",
     "What": "Variable",
     "defdec": "Def",
     "display": "length",
     "location": {
       "column": "11",
-      "line": "181",
+      "line": "184",
       "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\slaved_port.c"
     },
     "name": "length",
@@ -54202,170 +54314,58 @@
     "scope": null
   },
   {
-    "ID": "c:@select",
-    "What": "Variable",
+    "ID": "c:@F@ADC_Init",
+    "What": "Function",
     "defdec": "Def",
-    "display": "select",
+    "display": "void ADC_Init(void)",
     "location": {
-      "column": "9",
+      "column": "6",
       "line": "3",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\RES.c"
     },
-    "name": "select",
+    "name": "ADC_Init",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@MainMenu",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "MainMenu",
-    "location": {
-      "column": "8",
-      "line": "5",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "MainMenu",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@SLAVE1_MENU",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "SLAVE1_MENU",
-    "location": {
-      "column": "8",
-      "line": "6",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "SLAVE1_MENU",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@SLAVE2_MENU",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "SLAVE2_MENU",
-    "location": {
-      "column": "8",
-      "line": "7",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "SLAVE2_MENU",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@RTC",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "RTC",
-    "location": {
-      "column": "8",
-      "line": "8",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "RTC",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@RTC",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "RTC",
-    "location": {
-      "column": "8",
-      "line": "10",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "RTC",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@SLAVE2_MENU",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "SLAVE2_MENU",
-    "location": {
-      "column": "8",
-      "line": "17",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "SLAVE2_MENU",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@SLAVE1_MENU",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "SLAVE1_MENU",
-    "location": {
-      "column": "8",
-      "line": "24",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "SLAVE1_MENU",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@MainMenu",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "MainMenu",
-    "location": {
-      "column": "8",
-      "line": "31",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "MainMenu",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@currentMenu",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "currentMenu",
-    "location": {
-      "column": "9",
-      "line": "39",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
-    },
-    "name": "currentMenu",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Menu_Display_Select",
+    "ID": "c:@F@Read_ADC",
     "What": "Function",
     "defdec": "Def",
-    "display": "void Menu_Display_Select(Menu_t *, uint8_t)",
+    "display": "uint16_t Read_ADC(void)",
     "location": {
-      "column": "6",
-      "line": "41",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+      "column": "10",
+      "line": "9",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\RES.c"
     },
-    "name": "Menu_Display_Select",
+    "name": "Read_ADC",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@Send_Data_To_LCD",
-    "What": "Function",
+    "ID": "c:RES.c@428@F@Read_ADC@high",
+    "What": "Variable",
     "defdec": "Def",
-    "display": "void Send_Data_To_LCD(float, uint16_t, uint8_t *, float)",
+    "display": "high",
     "location": {
-      "column": "6",
-      "line": "58",
-      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\MenuLCD.c"
+      "column": "13",
+      "line": "14",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\RES.c"
     },
-    "name": "Send_Data_To_LCD",
+    "name": "high",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:RES.c@484@F@Read_ADC@low",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "low",
+    "location": {
+      "column": "13",
+      "line": "15",
+      "path": "D:\\1.Project_LAB_PTIT\\1.STM8s\\1.DocCamBien\\2.SLAVE\\1.SLAVE_1\\user\\RES.c"
+    },
+    "name": "low",
     "origin": "project_file",
     "scope": null
   },

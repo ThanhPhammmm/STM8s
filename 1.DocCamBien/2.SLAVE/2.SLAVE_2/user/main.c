@@ -78,8 +78,8 @@ int main(void){
   while(1){
     
     //UART_Time_Out();
-    Get_Current_Time(&current_time);
-    Get_Current_Date(&current_date);
+//    Get_Current_Time(&current_time);
+//    Get_Current_Date(&current_date);
     switch (slaveX_sensorX) {
       
 // --- Slave 2 RTC Handling ---
@@ -118,7 +118,8 @@ int main(void){
         case slave2_sensorRTC_WaitingAsk:
             if (Wait_For_UART_Frame_1s()) {
                 if (Wait_For_Ask_Data_Slave2_SensorRTC()) {
-
+//                    Get_Current_Time(&current_time);
+//                    Get_Current_Date(&current_date);
                     Send_Sensor_Data_RTC_Slave2();
                     receive_flag = 1;
                     slaveX_sensorX = slave2_sensorRTC_Switching;

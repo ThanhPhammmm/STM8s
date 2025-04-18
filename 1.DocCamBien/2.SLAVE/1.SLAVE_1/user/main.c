@@ -30,7 +30,6 @@ frame_Message_t detected_frame;
 #define slave1_sensorRES_WaitingAsk             8
 #define slave1_sensorRES_Switching              9
 
-
 uint8_t slave1_lux = 1;
 uint8_t slave1_res = 1;
 
@@ -43,8 +42,9 @@ uint16_t adc_value = 0;
 int main(void){
   CLK_HSI_16Mhz_config();
   UART_Configuration(9600);
+  //I2C_Init_BH1750();
+  I2c_Init();
   ADC_Init();
-  I2C_Init_BH1750();
   //Flash_Erase(EEPROM_START, EEPROM_SIZE);
   
   //Configure PD3 as output (Onboard LED);
@@ -52,9 +52,9 @@ int main(void){
 //  GPIOB->CR1 |= (1 << 5);  // Push-pull mode
   
   while(1){
-    BH1750_Write(0x10);  // Start high-resolution continuous mode
-    lux_value = BH1750_ReadLight();
-    adc_value = Read_ADC(); // Read ADC value from PD2 (AIN3)
+//    BH1750_Write(0x10);  // Start high-resolution continuous mode
+//    lux_value = BH1750_ReadLight();
+//    adc_value = Read_ADC(); // Read ADC value from PD2 (AIN3)
 
     //UART_Time_Out();
     switch (slaveX_sensorX) {

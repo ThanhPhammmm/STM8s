@@ -11,6 +11,28 @@
 #include <Detect.h>    
 #include <GetData.h>
       
+typedef enum{
+  Sending_SetSlave_to_slave1_sensorLux,
+  Waiting_ConfirmSlave_from_slave1_sensorLux,
+  Sending_AskData_to_slave1_sensorLux,
+  Waiting_RespondData_from_slave1_sensorLux,
+
+  Sending_SetSlave_to_slave1_sensorRES,
+  Waiting_ConfirmSlave_from_slave1_sensorRES,
+  Sending_AskData_to_slave1_sensorRES,
+  Waiting_RespondData_from_slave1_sensorRES,
+
+  Sending_SetSlave_to_slave2_sensorRTC,
+  Waiting_ConfirmSlave_from_slave2_sensorRTC,
+  Sending_AskData_to_slave2_sensorRTC,
+  Waiting_RespondData_from_slave2_sensorRTC,
+
+  Sending_SetSlave_to_slave2_sensorNTC,
+  Waiting_ConfirmSlave_from_slave2_sensorNTC,
+  Sending_AskData_to_slave2_sensorNTC,
+  Waiting_RespondData_from_slave2_sensorNTC
+}slave_state_e;
+
 extern frame_Message_t detected_frame;
 extern uint8_t array_receive[20];
 
