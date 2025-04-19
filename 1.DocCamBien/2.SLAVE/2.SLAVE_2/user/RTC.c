@@ -120,16 +120,16 @@ void Set_Current_Time(RTC_Time_t *RTC_Time){
 	DS1307_write(hours,DS1307_ADDR_HOUR);
 }
 void Set_Current_Date(RTC_Date_t *RTC_Date){
-	uint8_t day = RTC_Date->day;
+	uint8_t day = Binary_To_Bcd(RTC_Date->day);
 	DS1307_write(day,DS1307_ADDR_DAY);
 
-	uint8_t date = RTC_Date->date;
+	uint8_t date = Binary_To_Bcd(RTC_Date->date);
 	DS1307_write(date,DS1307_ADDR_DATE);
 
-	uint8_t month = RTC_Date->month;
+	uint8_t month = Binary_To_Bcd(RTC_Date->month);
 	DS1307_write(month,DS1307_ADDR_MONTH);
 
-	uint8_t year = RTC_Date->year;
+	uint8_t year = Binary_To_Bcd(RTC_Date->year);
 	DS1307_write(year,DS1307_ADDR_YEAR);
 }
 void Get_Current_Time(RTC_Time_t *RTC_Time){
@@ -175,7 +175,7 @@ void TimeToArray(RTC_Time_t *RTC_Time){
 }
 void DateToArray(RTC_Date_t *RTC_Date){
   RTC_buffer[0] = RTC_Date->day;
-  RTC_buffer[1] = RTC_Date->month;
-  RTC_buffer[2] = RTC_Date->date;
+  RTC_buffer[1] = RTC_Date->date;
+  RTC_buffer[2] = RTC_Date->month;
   RTC_buffer[3] = RTC_Date->year;
 }

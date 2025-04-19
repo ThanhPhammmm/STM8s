@@ -33,8 +33,6 @@ void UART_Configuration(uint16_t baudrate){
   UART1->CR1  = 0x00;  // Ensure no parity, 8-bit, etc.
   UART1->CR3  = 0x00;  // Ensure no LIN mode, no half-duplex
   UART1->CR2  = (1 << 2) | (1 << 3) | (1 << 5);
-  
-  enableInterrupts(); 
 }
 
 void UART_Send_Array(uint8_t* array, uint8_t length){

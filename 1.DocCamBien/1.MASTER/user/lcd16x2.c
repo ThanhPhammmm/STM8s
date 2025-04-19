@@ -225,9 +225,9 @@ void Send_RTC_To_LCD(uint8_t *data_sensor3) {
   LCD_Set_Cursor(1, 1);
   LCD_SendString(days_of_week[Bcd_To_Binary(data_sensor3[0])]); // Print day-of-week
   LCD_SendData('/');
-  LCD_Send16BitNumber_RTC((Bcd_To_Binary(data_sensor3[2])),2);                      // Print day number
+  LCD_Send16BitNumber_RTC((Bcd_To_Binary(data_sensor3[1])),2);       // Print day number
   LCD_SendData('/');
-  LCD_SendString(months[Bcd_To_Binary(data_sensor3[1] - 1)]);        // Print month
+  LCD_SendString(months[Bcd_To_Binary(data_sensor3[2]) - 1]);        // Print month
   LCD_SendData('/');
   LCD_Send16BitNumber_RTC((2000 + Bcd_To_Binary(data_sensor3[3])) / 100,2);               // Print century (20)
   LCD_Send16BitNumber_RTC((2000 + Bcd_To_Binary(data_sensor3[3])) % 100,2);               // Print year (04)

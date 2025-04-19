@@ -1,8 +1,8 @@
-uart.pbi: D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\user\uart.c \
-  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\user\uart.h \
-  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc\stm8s.h \
-  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s_conf.h \
+stm8s_tim2.pbi: \
+  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\library\src\stm8s_tim2.c \
+  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc\stm8s_tim2.h \
   D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s.h \
+  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s_conf.h \
   D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s_adc1.h \
   D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s_awu.h \
   D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s_beep.h \
@@ -20,16 +20,4 @@ uart.pbi: D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\user\uart.c \
   D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s_tim4.h \
   D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s_uart1.h \
   D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\project\..\library\inc/stm8s_wwdg.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\string.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ycheck.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\yvals.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Defaults.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\LIB\dlstm8smn.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Product.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\xencoding_limits.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \
-  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\user\FSM.h \
-  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\user\CreateFrame.h \
-  D:\1.Project_LAB_PTIT\1.STM8s\1.DocCamBien\1.MASTER\user\Convert.h
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h

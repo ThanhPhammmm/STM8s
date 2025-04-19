@@ -1651,6 +1651,9 @@
             <name>$PROJ_DIR$\..\library\src\stm8s_tim1.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\library\src\stm8s_tim2.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\library\src\stm8s_uart1.c</name>
         </file>
     </group>

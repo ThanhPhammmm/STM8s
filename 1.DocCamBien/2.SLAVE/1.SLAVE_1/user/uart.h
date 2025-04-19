@@ -14,7 +14,7 @@
 #define END_RECEIVE 2
 #define BUFFER_SIZE 20  // Adjust based on needs
 
-extern uint8_t receive_flag;
+extern volatile uint8_t receive_flag;
 
 void UART_Configuration (uint16_t baudrate);
 void UART_Send_Array (uint8_t* array, uint8_t length); 

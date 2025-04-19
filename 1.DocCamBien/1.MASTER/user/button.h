@@ -24,7 +24,7 @@ typedef struct{
   uint8_t pin;
 }typein_t;    
 
-extern uint8_t start_flag;
+extern volatile uint8_t start_flag;
 extern uint8_t select;
 extern Menu_t *currentMenu;
 extern Menu_t MainMenu;

@@ -35,7 +35,7 @@ uint8_t slave1_res = 1;
 
 volatile uint8_t slaveX_sensorX = slave1_sensorLux_WaitingSetPort;
 
-uint8_t receive_flag = 1;
+volatile uint8_t receive_flag = 1;
 float lux_value = 0;
 uint16_t adc_value = 0;
 
@@ -51,6 +51,8 @@ int main(void){
 //  GPIOB->DDR |= (1 << 5);  // Set PD3 as output
 //  GPIOB->CR1 |= (1 << 5);  // Push-pull mode
   
+  enableInterrupts();
+    
   while(1){
 //    BH1750_Write(0x10);  // Start high-resolution continuous mode
 //    lux_value = BH1750_ReadLight();
@@ -107,10 +109,11 @@ int main(void){
             if (Wait_For_UART_Frame_1s()) {
                 uint16_t type_message = Message_Detect_TypeMessage(array_receive, &detected_frame);
                 if (type_message == TYPE_MESSAGE_ASK_DATA) {
-                    slaveX_sensorX = slave1_sensorLux_WaitingAsk;
+                    //slaveX_sensorX = slave1_sensorLux_WaitingAsk;
+                    slaveX_sensorX = slave1_sensorRES_WaitingAsk;
                 } 
                 else if (type_message == TYPE_MESSAGE_SET_SLAVE) {
-                    slaveX_sensorX = slave1_sensorRES_WaitingSetPort;
+                    //slaveX_sensorX = slave1_sensorRES_WaitingSetPort;
                 }
                   receive_flag = 1;
             }

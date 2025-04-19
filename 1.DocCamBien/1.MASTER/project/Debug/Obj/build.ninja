@@ -21,6 +21,7 @@ rule browsedata
 
 #Build steps
 build stm8s_tim1.pbi : index stm8s_tim1.xcl
+build stm8s_tim2.pbi : index stm8s_tim2.xcl
 build stm8s_uart1.pbi : index stm8s_uart1.xcl
 build button.pbi : index button.xcl
 build Convert.pbi : index Convert.xcl
@@ -37,11 +38,11 @@ build port.pbi : index port.xcl
 build system.pbi : index system.xcl
 build tim.pbi : index tim.xcl
 build uart.pbi : index uart.xcl
-build MASTER_part0.pbi : link stm8s_tim1.pbi stm8s_uart1.pbi button.pbi Convert.pbi
-build MASTER_part1.pbi : link CreateFrame.pbi Detect.pbi FSM.pbi GetData.pbi
-build MASTER_part2.pbi : link gpio.pbi i2c.pbi lcd16x2.pbi main.pbi
-build MASTER_part3.pbi : link MenuLCD.pbi port.pbi system.pbi tim.pbi
-build MASTER_part4.pbi : link uart.pbi
+build MASTER_part0.pbi : link stm8s_tim1.pbi stm8s_tim2.pbi stm8s_uart1.pbi button.pbi
+build MASTER_part1.pbi : link Convert.pbi CreateFrame.pbi Detect.pbi FSM.pbi
+build MASTER_part2.pbi : link GetData.pbi gpio.pbi i2c.pbi lcd16x2.pbi
+build MASTER_part3.pbi : link main.pbi MenuLCD.pbi port.pbi system.pbi
+build MASTER_part4.pbi : link tim.pbi uart.pbi
 build MASTER.pbd : link MASTER_part0.pbi MASTER_part1.pbi MASTER_part2.pbi MASTER_part3.pbi MASTER_part4.pbi
 build MASTER.pbw : browsedata MASTER.pbd
 

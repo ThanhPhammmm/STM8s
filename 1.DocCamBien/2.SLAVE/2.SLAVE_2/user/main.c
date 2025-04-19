@@ -35,17 +35,16 @@ uint8_t slave2_ntc = 1;
 
 volatile uint8_t slaveX_sensorX = slave2_sensorRTC_WaitingSetPort;
 
-uint8_t receive_flag = 1;
+volatile uint8_t receive_flag = 1;
+volatile uint8_t get_RTC_flag = 0;
 
 RTC_Time_t current_time;
 RTC_Date_t current_date;
 
 INTERRUPT_HANDLER(TIM1_UPD_OVF_IRQHandler, 11)
 {
-  Get_Current_Time(&current_time);
-  Get_Current_Date(&current_date);
-        TIM1_CLEAR_IT_PENDING(UPDATE_EVENT);
-
+  TIM1_CLEAR_IT_PENDING(UPDATE_EVENT);
+  get_RTC_flag = 1;
 }
 
 int main(void){
@@ -62,24 +61,29 @@ int main(void){
   DS1307_Init();
 
   current_time.minutes = 0;
-  current_time.hours = 0;
+  current_time.hours = 7;
   current_time.seconds = 0;
   current_time.time_format = ALL_DAY_TYPE;
-
-  current_date.date = MONDAY;
-  current_date.day = 1;
-  current_date.month = 1;
+  
+  current_date.day = WEDNESDAY;
+  current_date.date = 25;
+  current_date.month = 2;
   current_date.year = 4;
   
   Set_Current_Time(&current_time);
   Set_Current_Date(&current_date);
   //GPIO_Init(DHT11_PORT, DHT11_PIN, GPIO_MODE_IN_FL_NO_IT);
-  //TIM1_BaseInit(15999, COUNT_UP, 600 - 1, 0);  // 1s period
+  //TIM1_BaseInit(15, COUNT_UP, 999, 0);  // 1ms interrupt
+  
+  enableInterrupts(); 
   while(1){
     
     //UART_Time_Out();
-//    Get_Current_Time(&current_time);
-//    Get_Current_Date(&current_date);
+    if(get_RTC_flag == 1){
+      Get_Current_Time(&current_time);
+      Get_Current_Date(&current_date);
+      get_RTC_flag = 0;
+    }
     switch (slaveX_sensorX) {
       
 // --- Slave 2 RTC Handling ---
@@ -134,7 +138,8 @@ int main(void){
             if (Wait_For_UART_Frame_1s()) {
                 uint16_t type_message = Message_Detect_TypeMessage(array_receive, &detected_frame);
                 if (type_message == TYPE_MESSAGE_ASK_DATA) {
-                    slaveX_sensorX = slave2_sensorRTC_WaitingAsk;
+                    //slaveX_sensorX = slave2_sensorRTC_WaitingAsk;
+                    slaveX_sensorX = slave2_sensorNTC_WaitingAsk;
                 } 
                 else if (type_message == TYPE_MESSAGE_SET_SLAVE) {
                     slaveX_sensorX = slave2_sensorNTC_WaitingSetPort;
